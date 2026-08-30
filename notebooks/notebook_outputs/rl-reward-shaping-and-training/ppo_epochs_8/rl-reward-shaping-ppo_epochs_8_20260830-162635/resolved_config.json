@@ -1,0 +1,1223 @@
+{
+  "algorithm": {
+    "buffer_kind": "rollout",
+    "constructor_kwargs": {
+      "batch_size": 64,
+      "clip_range": 0.2,
+      "clip_range_vf": null,
+      "device": "cpu",
+      "ent_coef": 0.0,
+      "gae_lambda": 0.95,
+      "gamma": 0.99,
+      "learning_rate": 0.0003,
+      "max_grad_norm": 0.5,
+      "n_epochs": 8,
+      "n_steps": 256,
+      "normalize_advantage": true,
+      "sde_sample_freq": -1,
+      "stats_window_size": 100,
+      "target_kl": null,
+      "use_sde": false,
+      "vf_coef": 0.5
+    },
+    "explicit_hyperparameter_overrides": {
+      "batch_size": 64,
+      "learning_rate": 0.0003,
+      "n_epochs": 8
+    },
+    "explicit_policy_kwargs": {},
+    "gradient_steps_per_collection": null,
+    "n_rollout_transitions_per_update_applicability": "applicable",
+    "n_rollout_transitions_per_update_effective": 1024,
+    "n_rollout_transitions_rounding_amount": 0,
+    "name": "PPO",
+    "native_n_steps_per_environment": 256,
+    "policy_alias": "MlpPolicy",
+    "policy_kwargs": {
+      "activation_fn": "tanh",
+      "net_arch": {
+        "pi": [
+          64,
+          64
+        ],
+        "vf": [
+          64,
+          64
+        ]
+      }
+    },
+    "ppo_minibatch_remainder": 0,
+    "profile_version": "dreamgym-sb3-2.9-v1",
+    "requested_n_rollout_transitions_per_update": 1024,
+    "transitions_per_collection": null,
+    "update_to_data_ratio": null
+  },
+  "algorithm_profile_version": "dreamgym-sb3-2.9-v1",
+  "artifacts": {
+    "animation_evaluation_road_index": 0,
+    "animation_evaluation_steps": [],
+    "final_policy_animation": {
+      "environment_reset_seed": 265699650,
+      "road_family": "fixed",
+      "road_family_index": 0,
+      "road_generation_seed": null,
+      "road_name": "fixed_0",
+      "road_source": "explicit_fixed_evaluation_road",
+      "road_spec": {
+        "elements": [
+          {
+            "cross_section_width_interpolation": "constant",
+            "geometry": {
+              "length_m": 200.0,
+              "type": "straight"
+            },
+            "lanes": {
+              "reference_lane": {
+                "surface": "tarmac",
+                "width_m": {
+                  "end": 3.6,
+                  "start": 3.6
+                }
+              },
+              "reference_line_role": "lane_center"
+            },
+            "speed_limit_kph": 70.0
+          },
+          {
+            "geometry": {
+              "curvature_per_m": -0.007692307692307693,
+              "sweep_angle_deg": 25.0,
+              "type": "circular_arc"
+            },
+            "speed_limit_kph": 60.0
+          },
+          {
+            "geometry": {
+              "length_m": 140.0,
+              "type": "straight"
+            },
+            "speed_limit_kph": 70.0
+          },
+          {
+            "geometry": {
+              "curvature_per_m": 0.00909090909090909,
+              "sweep_angle_deg": 30.0,
+              "type": "circular_arc"
+            },
+            "speed_limit_kph": 60.0
+          },
+          {
+            "geometry": {
+              "length_m": 550.0,
+              "type": "straight"
+            },
+            "speed_limit_kph": 70.0
+          }
+        ]
+      },
+      "stochastic_policy_action_seed": null
+    },
+    "save_final_model": true,
+    "save_final_plots": true,
+    "save_final_policy_animation": true,
+    "save_model_at_evaluations": true,
+    "save_plots_at_evaluations": true
+  },
+  "config_kind": "dreamgym.autonomous_driving.training",
+  "environment": {
+    "effective_action_interface": "full",
+    "gymnasium_metadata": {
+      "render_fps": 20
+    },
+    "postconstruction_settings": {
+      "tire_force_condition": "dry"
+    },
+    "public_constructor_template": {
+      "bicycle_model_config": {
+        "axle_geometry": {
+          "front_axle_distance_from_center_of_mass_m": 1.58125,
+          "rear_axle_distance_from_center_of_mass_m": 1.29375
+        },
+        "body_geometry": {
+          "front_extent_from_center_of_mass_m": 2.371875,
+          "rear_extent_from_center_of_mass_m": 1.9406249999999998,
+          "width_m": 2.5
+        },
+        "kinematic_dynamic_transition": {
+          "body_longitudinal_speed_range_mps": {
+            "lower": 138.88888888888889,
+            "upper": 166.66666666666666
+          }
+        },
+        "longitudinal_force_model": {
+          "normalized_motor_command_force_gain_n": 15748.031496062993,
+          "quadratic_aerodynamic_drag_coefficient_kg_per_m": 0.320270496
+        },
+        "mass_properties": {
+          "mass_kg": 2000.0,
+          "yaw_moment_of_inertia_kg_m2": 4239.560666666667
+        },
+        "steering": {
+          "physical_front_wheel_angle_offset_from_request_rad": 0.0,
+          "physical_front_wheel_angle_rate_bounds_rad_per_s": {
+            "lower": -0.7853981633974483,
+            "upper": 0.7853981633974483
+          },
+          "requested_front_wheel_angle_magnitude_limit_rad": 0.7853981633974483
+        },
+        "tire_force_model": {
+          "road_conditions": {
+            "dry": {
+              "curvature_factor_e": 0.97,
+              "peak_factor_d": 1.0,
+              "shape_factor_c": 1.9,
+              "stiffness_factor_b": 10.0
+            },
+            "ice": {
+              "curvature_factor_e": 1.0,
+              "peak_factor_d": 0.1,
+              "shape_factor_c": 2.0,
+              "stiffness_factor_b": 4.0
+            },
+            "snow": {
+              "curvature_factor_e": 1.0,
+              "peak_factor_d": 0.3,
+              "shape_factor_c": 2.0,
+              "stiffness_factor_b": 5.0
+            },
+            "wet": {
+              "curvature_factor_e": 1.0,
+              "peak_factor_d": 0.82,
+              "shape_factor_c": 2.3,
+              "stiffness_factor_b": 12.0
+            }
+          }
+        }
+      },
+      "ground_truth_mode": "operational",
+      "initial_state_config": {
+        "bounds": {
+          "body_motion": {
+            "lateral_velocity_mps": {
+              "lower": 0.0,
+              "upper": 0.0
+            },
+            "longitudinal_velocity_mps": {
+              "lower": 15.277777777777777,
+              "upper": 18.055555555555554
+            },
+            "yaw_rate_rad_per_s": {
+              "lower": 0.0,
+              "upper": 0.0
+            }
+          },
+          "front_wheel_steering_angle_rad": {
+            "lower": 0.0,
+            "upper": 0.0
+          },
+          "world_pose": {
+            "heading_rad": {
+              "lower": 0.0,
+              "upper": 0.0
+            },
+            "x_m": {
+              "lower": 0.0,
+              "upper": 0.0
+            },
+            "y_m": {
+              "lower": -1.0,
+              "upper": 1.0
+            }
+          }
+        },
+        "reference_line_progress_search": null
+      },
+      "integration_config": {
+        "environment_step_duration_s": 0.05,
+        "method": "rk4",
+        "substep_count": 1
+      },
+      "internal_policy_config": {
+        "action_interface": "full",
+        "cruise_control": {
+          "enabled": false,
+          "policy": {
+            "mode": "built_in",
+            "pid": {
+              "derivative_gain_per_mps2": 0.0,
+              "integral_gain_per_m": 0.05,
+              "integrated_speed_error_limit_m": 50.0,
+              "proportional_gain_per_mps": 0.2
+            },
+            "target_speed": {
+              "source": "road_recommended_speed_then_speed_limit"
+            }
+          }
+        },
+        "lane_keeping": {
+          "enabled": false,
+          "policy": {
+            "curvature_feedforward_gain": 0.8,
+            "heading_error_feedback_gain": 1.2,
+            "lateral_error_feedback_gain_rad_per_m": 0.4,
+            "mode": "built_in"
+          }
+        }
+      },
+      "observation_config": {
+        "body_lateral_acceleration_mps2": {
+          "destination": "neither",
+          "scaling_factor": 1.0
+        },
+        "body_longitudinal_acceleration_mps2": {
+          "destination": "neither",
+          "scaling_factor": 1.0
+        },
+        "body_longitudinal_velocity_mps": {
+          "bias_mps": 0.0,
+          "destination": "observation",
+          "noise_standard_deviation_mps": 0.0,
+          "scaling_factor": 1.0
+        },
+        "cone_detections": {
+          "acquisition": {
+            "forward_position_upper_bound_m": 30.0,
+            "horizontal_field_of_view_deg": 120.0,
+            "position_error_in_body_frame": {
+              "forward": {
+                "noise_standard_deviation_m": 0.0
+              },
+              "left": {
+                "noise_standard_deviation_m": 0.0
+              }
+            }
+          },
+          "color_ids": {
+            "destination": "neither"
+          },
+          "count": {
+            "destination": "neither"
+          },
+          "maximum_detection_count": 20,
+          "positions_in_body_frame_m": {
+            "destination": "neither",
+            "scaling_factor": 1.0
+          }
+        },
+        "fixed_noise_seed": null,
+        "front_wheel_steering_angle_rad": {
+          "bias_rad": 0.0,
+          "destination": "observation",
+          "noise_standard_deviation_rad": 0.0,
+          "resolution_rad": 0.0,
+          "scaling_factor": 1.0
+        },
+        "ground_truth_body_lateral_velocity_mps": {
+          "destination": "neither",
+          "scaling_factor": 1.0
+        },
+        "ground_truth_body_longitudinal_velocity_mps": {
+          "destination": "neither",
+          "scaling_factor": 1.0
+        },
+        "ground_truth_front_wheel_steering_angle_rad": {
+          "destination": "neither",
+          "scaling_factor": 1.0
+        },
+        "ground_truth_heading_in_world_frame_rad": {
+          "destination": "neither",
+          "scaling_factor": 1.0
+        },
+        "ground_truth_world_position_x_m": {
+          "destination": "neither",
+          "scaling_factor": 1.0
+        },
+        "ground_truth_world_position_y_m": {
+          "destination": "neither",
+          "scaling_factor": 1.0
+        },
+        "ground_truth_yaw_rate_rad_per_s": {
+          "destination": "neither",
+          "scaling_factor": 1.0
+        },
+        "heading_error_from_target_line_rad": {
+          "bias_rad": 0.0,
+          "destination": "observation",
+          "noise_standard_deviation_rad": 0.0,
+          "scaling_factor": 1.0
+        },
+        "lateral_error_from_reference_line_m": {
+          "bias_m": 0.0,
+          "destination": "neither",
+          "noise_standard_deviation_m": 0.0,
+          "scaling_factor": 1.0
+        },
+        "lateral_error_from_target_line_m": {
+          "bias_m": 0.0,
+          "destination": "observation",
+          "noise_standard_deviation_m": 0.0,
+          "scaling_factor": 1.0
+        },
+        "next_recommended_speed_change": {
+          "exists": {
+            "destination": "neither"
+          },
+          "reference_line_distance_m": {
+            "destination": "neither",
+            "scaling_factor": 1.0
+          },
+          "value_mps": {
+            "destination": "neither",
+            "scaling_factor": 1.0
+          }
+        },
+        "next_speed_limit_change": {
+          "exists": {
+            "destination": "neither"
+          },
+          "reference_line_distance_m": {
+            "destination": "neither",
+            "scaling_factor": 1.0
+          },
+          "value_mps": {
+            "destination": "neither",
+            "scaling_factor": 1.0
+          }
+        },
+        "recommended_speed_mps": {
+          "destination": "observation",
+          "scaling_factor": 1.0
+        },
+        "reference_line_closest_point_position_in_body_frame_m": {
+          "bias_m": 0.0,
+          "destination": "neither",
+          "noise_standard_deviation_m": 0.0,
+          "scaling_factor": 1.0
+        },
+        "reference_line_progress_m": {
+          "destination": "neither",
+          "scaling_factor": 1.0
+        },
+        "road_preview": {
+          "acquisition": {
+            "latency_s": 0.0,
+            "output_errors": {
+              "left_lane_bound_offsets_from_target_line_m": {
+                "bias_m": 0.0,
+                "noise_standard_deviation_m": 0.0
+              },
+              "recommended_speeds_mps": {
+                "bias_mps": 0.0,
+                "noise_standard_deviation_mps": 0.0
+              },
+              "right_lane_bound_offsets_from_target_line_m": {
+                "bias_m": 0.0,
+                "noise_standard_deviation_m": 0.0
+              },
+              "speed_limits_mps": {
+                "bias_mps": 0.0,
+                "noise_standard_deviation_mps": 0.0
+              },
+              "target_line_curvatures_per_m": {
+                "bias_per_m": 0.0,
+                "noise_standard_deviation_per_m": 0.0
+              }
+            },
+            "query_origin_error_along_target_line": {
+              "bias_m": 0.0,
+              "noise_standard_deviation_m": 0.0,
+              "random_walk_standard_deviation_m_per_sqrt_s": 0.0
+            }
+          },
+          "is_spatially_valid": {
+            "destination": "neither"
+          },
+          "lane_bounds": null,
+          "lane_bounds_are_available": {
+            "destination": "neither"
+          },
+          "left_lane_bound_offsets_from_target_line_m": {
+            "destination": "neither",
+            "scaling_factor": 1.0
+          },
+          "recommended_speeds_mps": {
+            "destination": "neither",
+            "scaling_factor": 1.0
+          },
+          "right_lane_bound_offsets_from_target_line_m": {
+            "destination": "neither",
+            "scaling_factor": 1.0
+          },
+          "speed_limits_mps": {
+            "destination": "neither",
+            "scaling_factor": 1.0
+          },
+          "target_line_curvatures_per_m": {
+            "destination": "neither",
+            "scaling_factor": 1.0
+          },
+          "target_line_distances_m": null
+        },
+        "speed_limit_mps": {
+          "destination": "observation",
+          "scaling_factor": 1.0
+        },
+        "target_line_curvature_per_m": {
+          "bias_per_m": 0.0,
+          "destination": "observation",
+          "noise_standard_deviation_per_m": 0.0,
+          "scaling_factor": 1.0
+        },
+        "target_line_lookahead": {
+          "acquisition": {
+            "mode": "road_geometry"
+          },
+          "curvatures_per_m": {
+            "destination": "observation",
+            "scaling_factor": 1.0
+          },
+          "maximum_distance_m": 100.0,
+          "positions_in_body_frame_m": {
+            "destination": "observation",
+            "scaling_factor": 1.0
+          },
+          "sample_count": 10
+        },
+        "target_line_offset_from_reference_line_m": {
+          "bias_m": 0.0,
+          "destination": "neither",
+          "noise_standard_deviation_m": 0.0,
+          "scaling_factor": 1.0
+        },
+        "target_line_position_at_closest_reference_line_progress_in_body_frame_m": {
+          "bias_m": 0.0,
+          "destination": "neither",
+          "noise_standard_deviation_m": 0.0,
+          "scaling_factor": 1.0
+        },
+        "yaw_rate_rad_per_s": {
+          "bias_rad_per_s": 0.0,
+          "destination": "neither",
+          "noise_standard_deviation_rad_per_s": 0.0,
+          "sample_count_per_environment_step": 1,
+          "scaling_factor": 1.0
+        }
+      },
+      "observation_format": "flat",
+      "render_config": {
+        "frame_size_px": [
+          900,
+          700
+        ],
+        "maximum_road_geometry_sample_spacing_m": 1.0,
+        "road_content": {
+          "include_cones": true,
+          "include_edge_bands": true,
+          "include_lane_surfaces": true,
+          "include_markings": true,
+          "include_reference_line": true
+        },
+        "view": {
+          "minimum_height_m": 40.0,
+          "minimum_width_m": 40.0,
+          "mode": "follow_vehicle"
+        }
+      },
+      "render_mode": null,
+      "target_line_config": {
+        "mode": "reference_line"
+      },
+      "termination_config": {
+        "absolute_lateral_error_from_target_line_upper_bound_m": 20.0,
+        "planar_speed_bounds_mps": {
+          "lower": 0.0,
+          "upper": 55.55555555555556
+        }
+      },
+      "visualization_theme": null
+    },
+    "target_relative_reset": {
+      "body_longitudinal_velocity_target": {
+        "error_range_kph": {
+          "lower": -10.0,
+          "upper": 0.0
+        },
+        "source": "road_recommended_speed_then_speed_limit"
+      },
+      "fixed_state_values": {
+        "body_motion": {
+          "lateral_velocity_mps": 0.0,
+          "yaw_rate_rad_per_s": 0.0
+        },
+        "front_wheel_steering_angle_rad": 0.0
+      },
+      "heading_error_from_target_line_rad": 0.0,
+      "lateral_error_from_target_line_range_m": {
+        "lower": -1.0,
+        "upper": 1.0
+      },
+      "reference_line_progress_m": 0.0
+    },
+    "training": {
+      "action_interface": "full",
+      "cone_detection_forward_position_upper_bound_m": 30.0,
+      "cone_detection_horizontal_field_of_view_degrees": 120.0,
+      "cone_detection_observation_capacity": 20,
+      "enable_cruise_control": false,
+      "enable_lane_keep": false,
+      "environment_timestep_seconds": 0.05,
+      "ground_truth_mode": "operational",
+      "include_cone_detection_observations": false,
+      "include_next_speed_change_observations": false,
+      "initial_lateral_error_range_m": [
+        -1.0,
+        1.0
+      ],
+      "initial_speed_error_range_kph": [
+        -10.0,
+        0.0
+      ],
+      "integration_method": "rk4",
+      "integration_substeps_per_environment_step": 1,
+      "max_episode_steps": null,
+      "observation_format": "flat",
+      "target_lane_index": 1,
+      "target_line_lookahead_distance_m": 100.0,
+      "target_line_lookahead_point_count": 10,
+      "termination_absolute_lateral_error_from_target_line_upper_bound_m": 20.0,
+      "termination_planar_speed_lower_bound_kph": 0.0,
+      "termination_planar_speed_upper_bound_kph": 200.0,
+      "tire_force_condition": "dry",
+      "tracking_mode": "reference_line",
+      "vehicle_dynamics_regime": "kinematic"
+    }
+  },
+  "evaluation": {
+    "configuration": {
+      "deterministic_actions": true,
+      "environment_reset_seed": 20261010,
+      "interval_steps": 62500,
+      "max_rollout_steps_per_road": 2000,
+      "stochastic_policy_action_seed": 20261011
+    },
+    "road_counts": {
+      "fixed": 1,
+      "fresh_random": 0,
+      "reused_random": 0
+    },
+    "road_family_order": [
+      "fixed",
+      "reused_random",
+      "fresh_random"
+    ]
+  },
+  "experiment_name": "rl-reward-shaping-ppo_epochs_8",
+  "logging": {
+    "enable_tensorboard_logging": false,
+    "print_progress_to_console": true,
+    "progress_interval_steps": 62500,
+    "save_monitor_csv": true
+  },
+  "requested_config_digest": "7255eb18212c8a7370fb45a5ee85db1d04a6c5e61a489f78fa27501dba39bc42",
+  "requested_total_environment_transitions": 250000,
+  "resolver_version": "dreamgym-training-resolver-v3",
+  "reward": {
+    "effective": {
+      "preset_name": "combined_lane_speed",
+      "preset_parameters": {
+        "absolute_lateral_error_from_target_line_termination_reward": -10.0,
+        "k_lane": 2.0,
+        "k_progress": 0.05,
+        "k_speed": 1.0,
+        "road_progress_completion_reward": 5.0,
+        "truncation_without_termination_reward": -2.0
+      }
+    },
+    "requested": {
+      "preset_name": "combined_lane_speed",
+      "preset_parameters": {
+        "absolute_lateral_error_from_target_line_termination_reward": -10.0,
+        "k_lane": 2.0,
+        "k_progress": 0.05,
+        "k_speed": 1.0,
+        "road_progress_completion_reward": 5.0,
+        "truncation_without_termination_reward": -2.0
+      }
+    }
+  },
+  "roads": {
+    "default_training_road_spec": {
+      "active_lane_minimum_width_m": 0.05,
+      "defaults": {
+        "speed_limit_kph": 80.0
+      },
+      "elements": [
+        {
+          "cross_section_width_interpolation": "linear",
+          "geometry": {
+            "length_m": 80.0,
+            "type": "straight"
+          },
+          "lanes": {
+            "left": [
+              {
+                "width_m": {
+                  "start": 3.5
+                }
+              }
+            ],
+            "reference_line_role": "lane_boundary",
+            "right": []
+          }
+        },
+        {
+          "geometry": {
+            "curvature_per_m": 0.004,
+            "sweep_angle_deg": 20.0,
+            "type": "circular_arc"
+          }
+        },
+        {
+          "geometry": {
+            "length_m": 80.0,
+            "type": "straight"
+          }
+        },
+        {
+          "geometry": {
+            "curvature_per_m": -0.004545454545454545,
+            "sweep_angle_deg": 25.0,
+            "type": "circular_arc"
+          }
+        },
+        {
+          "geometry": {
+            "length_m": 80.0,
+            "type": "straight"
+          }
+        }
+      ]
+    },
+    "evaluation_road_generation_seed": 20260910,
+    "fixed_evaluation_road_specs": [
+      {
+        "elements": [
+          {
+            "cross_section_width_interpolation": "constant",
+            "geometry": {
+              "length_m": 200.0,
+              "type": "straight"
+            },
+            "lanes": {
+              "reference_lane": {
+                "surface": "tarmac",
+                "width_m": {
+                  "end": 3.6,
+                  "start": 3.6
+                }
+              },
+              "reference_line_role": "lane_center"
+            },
+            "speed_limit_kph": 70.0
+          },
+          {
+            "geometry": {
+              "curvature_per_m": -0.007692307692307693,
+              "sweep_angle_deg": 25.0,
+              "type": "circular_arc"
+            },
+            "speed_limit_kph": 60.0
+          },
+          {
+            "geometry": {
+              "length_m": 140.0,
+              "type": "straight"
+            },
+            "speed_limit_kph": 70.0
+          },
+          {
+            "geometry": {
+              "curvature_per_m": 0.00909090909090909,
+              "sweep_angle_deg": 30.0,
+              "type": "circular_arc"
+            },
+            "speed_limit_kph": 60.0
+          },
+          {
+            "geometry": {
+              "length_m": 550.0,
+              "type": "straight"
+            },
+            "speed_limit_kph": 70.0
+          }
+        ]
+      }
+    ],
+    "fixed_train_road_spec": {
+      "elements": [
+        {
+          "cross_section_width_interpolation": "constant",
+          "geometry": {
+            "length_m": 180.0,
+            "type": "straight"
+          },
+          "lanes": {
+            "reference_lane": {
+              "surface": "tarmac",
+              "width_m": {
+                "end": 3.6,
+                "start": 3.6
+              }
+            },
+            "reference_line_role": "lane_center"
+          },
+          "speed_limit_kph": 70.0
+        },
+        {
+          "geometry": {
+            "curvature_per_m": 0.005555555555555556,
+            "sweep_angle_deg": 30.0,
+            "type": "circular_arc"
+          },
+          "speed_limit_kph": 60.0
+        },
+        {
+          "geometry": {
+            "length_m": 160.0,
+            "type": "straight"
+          },
+          "speed_limit_kph": 70.0
+        },
+        {
+          "geometry": {
+            "curvature_per_m": -0.006666666666666667,
+            "sweep_angle_deg": 35.0,
+            "type": "circular_arc"
+          },
+          "speed_limit_kph": 60.0
+        },
+        {
+          "geometry": {
+            "length_m": 500.0,
+            "type": "straight"
+          },
+          "speed_limit_kph": 70.0
+        }
+      ]
+    },
+    "n_fresh_random_evaluation_roads_per_evaluation": 0,
+    "n_random_evaluation_roads_reused_across_evaluations": 0,
+    "random_evaluation_road_generation": {
+      "normalized_generation_config": {
+        "active_lane_minimum_width_m": 0.05,
+        "circular_arc": {
+          "radius_range_m": {
+            "lower": 80.0,
+            "upper": 450.0
+          },
+          "sweep_angle_range_deg": {
+            "lower": 8.0,
+            "upper": 45.0
+          }
+        },
+        "element_count_range": {
+          "lower": 4,
+          "upper": 8
+        },
+        "first_element": {
+          "require_straight": true,
+          "straight_length_range_m": {
+            "lower": 20.0,
+            "upper": 60.0
+          }
+        },
+        "initial_cross_section": {
+          "left_lane_width_range_m": {
+            "lower": 3.0,
+            "upper": 3.8
+          },
+          "reference_line_role": "lane_boundary"
+        },
+        "speed_limit_range_kph": {
+          "lower": 50.0,
+          "upper": 90.0
+        },
+        "straight": {
+          "length_range_m": {
+            "lower": 35.0,
+            "upper": 140.0
+          }
+        },
+        "straight_element_probability": 0.45
+      },
+      "requested_generation_config": {
+        "active_lane_minimum_width_m": 0.05,
+        "circular_arc": {
+          "radius_range_m": {
+            "lower": 80.0,
+            "upper": 450.0
+          },
+          "sweep_angle_range_deg": {
+            "lower": 8.0,
+            "upper": 45.0
+          }
+        },
+        "element_count_range": {
+          "lower": 4,
+          "upper": 8
+        },
+        "first_element": {
+          "require_straight": true,
+          "straight_length_range_m": {
+            "lower": 20.0,
+            "upper": 60.0
+          }
+        },
+        "initial_cross_section": {
+          "left_lane_width_range_m": {
+            "lower": 3.0,
+            "upper": 3.8
+          },
+          "reference_line_role": "lane_boundary"
+        },
+        "speed_limit_range_kph": {
+          "lower": 50.0,
+          "upper": 90.0
+        },
+        "straight": {
+          "length_range_m": {
+            "lower": 35.0,
+            "upper": 140.0
+          }
+        },
+        "straight_element_probability": 0.45
+      }
+    },
+    "train_randomization": {
+      "controls": {
+        "enabled": false,
+        "n_road_specs_in_reusable_pool": 0,
+        "reset_road_sampling_mode": "generate_fresh",
+        "seed": 20260811
+      },
+      "normalized_generation_config": {
+        "active_lane_minimum_width_m": 0.05,
+        "circular_arc": {
+          "radius_range_m": {
+            "lower": 80.0,
+            "upper": 450.0
+          },
+          "sweep_angle_range_deg": {
+            "lower": 8.0,
+            "upper": 45.0
+          }
+        },
+        "element_count_range": {
+          "lower": 4,
+          "upper": 8
+        },
+        "first_element": {
+          "require_straight": true,
+          "straight_length_range_m": {
+            "lower": 20.0,
+            "upper": 60.0
+          }
+        },
+        "initial_cross_section": {
+          "left_lane_width_range_m": {
+            "lower": 3.0,
+            "upper": 3.8
+          },
+          "reference_line_role": "lane_boundary"
+        },
+        "speed_limit_range_kph": {
+          "lower": 50.0,
+          "upper": 90.0
+        },
+        "straight": {
+          "length_range_m": {
+            "lower": 35.0,
+            "upper": 140.0
+          }
+        },
+        "straight_element_probability": 0.45
+      },
+      "requested_generation_config": {
+        "active_lane_minimum_width_m": 0.05,
+        "circular_arc": {
+          "radius_range_m": {
+            "lower": 80.0,
+            "upper": 450.0
+          },
+          "sweep_angle_range_deg": {
+            "lower": 8.0,
+            "upper": 45.0
+          }
+        },
+        "element_count_range": {
+          "lower": 4,
+          "upper": 8
+        },
+        "first_element": {
+          "require_straight": true,
+          "straight_length_range_m": {
+            "lower": 20.0,
+            "upper": 60.0
+          }
+        },
+        "initial_cross_section": {
+          "left_lane_width_range_m": {
+            "lower": 3.0,
+            "upper": 3.8
+          },
+          "reference_line_role": "lane_boundary"
+        },
+        "speed_limit_range_kph": {
+          "lower": 50.0,
+          "upper": 90.0
+        },
+        "straight": {
+          "length_range_m": {
+            "lower": 35.0,
+            "upper": 140.0
+          }
+        },
+        "straight_element_probability": 0.45
+      }
+    },
+    "training_source_precedence": [
+      "explicit_argument",
+      "fixed_train_road_spec",
+      "train_randomization",
+      "default_training_road"
+    ],
+    "winning_training_source": "fixed_train_road_spec"
+  },
+  "runtime_model": {
+    "activation_class": "torch.nn.modules.activation.Tanh",
+    "activation_fn": "tanh",
+    "buffer_class": "stable_baselines3.common.buffers.RolloutBuffer",
+    "buffer_kwargs": {},
+    "critic_count": 1,
+    "device": "cpu",
+    "feature_extractor_class": "stable_baselines3.common.torch_layers.FlattenExtractor",
+    "net_arch": {
+      "pi": [
+        64,
+        64
+      ],
+      "vf": [
+        64,
+        64
+      ]
+    },
+    "policy_alias": "MlpPolicy",
+    "policy_class": "stable_baselines3.common.policies.ActorCriticPolicy"
+  },
+  "schema_version": 2,
+  "seed_derivation_version": "dreamgym-seed-derivation-v1",
+  "seeds": {
+    "counter_rule": "an explicit Gymnasium reset seed restarts at counter zero; an unseeded reset advances the counter",
+    "evaluation": {
+      "environment_reset": {
+        "components": [
+          "evaluation_environment_reset_seed",
+          "ordered_road_index"
+        ],
+        "namespace": "evaluation_environment_reset"
+      },
+      "fresh_road": {
+        "components": [
+          "evaluation_road_generation_seed",
+          "evaluation_execution_context_identity",
+          "road_family_index"
+        ],
+        "evaluation_execution_context_identity": {
+          "during_training": "scheduled_evaluation_step",
+          "standalone": 0
+        },
+        "namespace": "evaluation_fresh_road"
+      },
+      "reused_road": {
+        "components": [
+          "evaluation_road_generation_seed",
+          "road_family_index"
+        ],
+        "namespace": "evaluation_reused_road"
+      },
+      "stochastic_policy_action": {
+        "applicability": "deterministic_actions_is_false",
+        "components": [
+          "evaluation_stochastic_policy_action_seed",
+          "ordered_road_index"
+        ],
+        "namespace": "evaluation_stochastic_policy_action"
+      }
+    },
+    "inputs": {
+      "evaluation_environment_reset_seed": 20261010,
+      "evaluation_road_generation_seed": 20260910,
+      "evaluation_stochastic_policy_action_seed": 20261011,
+      "training_road_randomizer_seed": 20260811,
+      "training_root_seed": 20260810
+    },
+    "training_initial_state": {
+      "components": {
+        "reset_counter": 0,
+        "sb3_reset_seed": 20260810
+      },
+      "derived_seed": 1754943865,
+      "namespace": "training_initial_state"
+    },
+    "training_road": {
+      "components": {
+        "reset_counter": 0,
+        "sb3_reset_seed": 20260810,
+        "training_road_randomizer_seed": 20260811
+      },
+      "derived_seed": 1486538316,
+      "namespace": "training_road"
+    }
+  },
+  "snapshot_type": "resolved",
+  "spaces": {
+    "action": {
+      "dtype": "float32",
+      "high": [
+        1.0,
+        1.0
+      ],
+      "low": [
+        -1.0,
+        -1.0
+      ],
+      "shape": [
+        2
+      ],
+      "type": "Box"
+    },
+    "flat_observation_names": [
+      "body_longitudinal_velocity_mps",
+      "front_wheel_steering_angle_rad",
+      "lateral_error_from_target_line_m",
+      "heading_error_from_target_line_rad",
+      "target_line_lookahead_positions_in_body_frame_m",
+      "target_line_curvature_per_m",
+      "target_line_lookahead_curvatures_per_m",
+      "speed_limit_mps",
+      "recommended_speed_mps"
+    ],
+    "observation": {
+      "dtype": "float32",
+      "high": [
+        "positive_infinity",
+        1.5707963705062866,
+        "positive_infinity",
+        3.1415927410125732,
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity",
+        "positive_infinity"
+      ],
+      "low": [
+        "negative_infinity",
+        -1.5707963705062866,
+        "negative_infinity",
+        -3.1415927410125732,
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity",
+        "negative_infinity"
+      ],
+      "shape": [
+        37
+      ],
+      "type": "Box"
+    }
+  },
+  "vectorization": {
+    "effective_n_envs": 4,
+    "n_envs_source": "explicit_override",
+    "requested_n_envs": 4,
+    "subproc_start_method": "spawn",
+    "vec_env": "dummy"
+  },
+  "versions": {
+    "dreamgym": "0.2.2",
+    "gymnasium": "1.3.0",
+    "numpy": "2.5.2",
+    "python": "3.12.14",
+    "stable_baselines3": "2.9.0",
+    "torch": "2.13.0"
+  },
+  "warnings": [],
+  "wrappers": {
+    "exact_inner_to_outer": [
+      "AutonomousDrivingEnv",
+      "PassiveEnvChecker",
+      "OrderEnforcing",
+      "TargetRelativeInitialStateResetWrapper",
+      "CombinedLaneSpeedRewardWrapper",
+      "DummyVecEnv",
+      "VecMonitor"
+    ]
+  }
+}
