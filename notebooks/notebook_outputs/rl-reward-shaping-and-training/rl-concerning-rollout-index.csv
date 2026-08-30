@@ -1,0 +1,2 @@
+policy_name,rollout_index,terminated,truncated,steps_recorded,mass_multiplier,initial_world_position_y_m
+domain-randomized,5,False,False,0,1.0224738330140166,-0.011236650675166604

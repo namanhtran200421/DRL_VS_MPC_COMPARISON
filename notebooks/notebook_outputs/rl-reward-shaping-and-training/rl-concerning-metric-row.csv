@@ -1,0 +1,2 @@
+policy_name,rollout_index,terminated,truncated,mass_multiplier,initial_world_position_y_m,mean_abs_lateral_error_m,mean_abs_speed_error_to_recommended_kph,final_progress_m,fraction_outside_lateral_tolerance,cumulative_overspeed_duration_s,maximum_overspeed_kph,rms_longitudinal_jerk_mps3,rms_steering_request_rate_rad_per_s
+domain-randomized,5,False,False,1.0224738330140166,-0.011236650675166604,5.057842770097796,57.416044812917406,342.13238525390625,0.854763491005996,0.0,0.0,21.18440929007609,3.7132235268005056
