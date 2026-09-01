@@ -1,0 +1,11 @@
+,Deep RL,MPC,Better
+mean_abs_lateral_error_m,3.8583257213269535,0.04797389971660163,MPC
+mean_abs_speed_error_to_recommended_kph,37.34033792639275,2.455603496192751,MPC
+final_progress_m,856.5587692260742,1532.7613830566406,MPC
+fraction_outside_lateral_tolerance,0.7826382535170888,0.0007846829880728185,MPC
+cumulative_overspeed_duration_s,22.91249999999951,6.57499999999986,MPC
+maximum_overspeed_kph,75.14945840835571,34.164940738677984,MPC
+rms_longitudinal_jerk_mps3,12.574514243145739,2.7174780249244908,MPC
+rms_steering_request_rate_rad_per_s,1.5976563327487137,0.054435871386532844,MPC
+terminated_road_count,4.0,4.0,Status only
+truncated_road_count,0.0,0.0,Status only

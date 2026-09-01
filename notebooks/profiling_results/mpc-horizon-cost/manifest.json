@@ -1,0 +1,1275 @@
+{
+  "artifacts": {
+    "summary.md": {
+      "media_type": "text/markdown; charset=utf-8",
+      "path": "summary.md",
+      "sha256": "688da854f79e6802d4a20c3e79240c47991c3fffce9684ddf905ae92e0f1012e"
+    },
+    "tables/cases.csv": {
+      "media_type": "text/csv; charset=utf-8",
+      "path": "tables/cases.csv",
+      "sha256": "7f9feb5591b8daa8129e76ae8bb00a1e2c646f7f24e25f69ba2467cc2f6dd7fd"
+    }
+  },
+  "bundle_id": "f2ae8e84d5104f67baae5775f4ee47f3",
+  "cases": {
+    "execution-52839be8c1432423ea06e689f554a5e76b368c3c53b193d71219fa35e3862228": {
+      "benchmark_release": "custom",
+      "case_id": "execution-52839be8c1432423ea06e689f554a5e76b368c3c53b193d71219fa35e3862228",
+      "category": "mpc-steering_rate-h50-soft-on",
+      "eligibility": {
+        "sample_aggregation": true,
+        "semantic_reuse_import": true
+      },
+      "execution_spec": {
+        "candidate_execution": false,
+        "execution_spec_version": "dreamgym-mpc-execution-v1",
+        "repetitions": 3,
+        "required": true,
+        "sample_count": 100,
+        "warmup_iterations": 50
+      },
+      "execution_spec_digest": "caa8331b63c03a149b8338e892acf6bb0f1e56fe37c3344af3361180b24b5090",
+      "fixed_seeds": {
+        "generation_seed": 0
+      },
+      "fixture_identity": {
+        "environment": {
+          "bicycle_model_config": {
+            "axle_geometry": {
+              "front_axle_distance_from_center_of_mass_m": 1.25,
+              "rear_axle_distance_from_center_of_mass_m": 1.75
+            },
+            "kinematic_dynamic_transition": {
+              "body_longitudinal_speed_range_mps": {
+                "lower": 1000.0,
+                "upper": 1001.0
+              }
+            },
+            "longitudinal_force_model": {
+              "normalized_motor_command_force_gain_n": 2400.0,
+              "quadratic_aerodynamic_drag_coefficient_kg_per_m": 0.0
+            },
+            "mass_properties": {
+              "mass_kg": 1200.0,
+              "yaw_moment_of_inertia_kg_m2": 1800.0
+            },
+            "steering": {
+              "physical_front_wheel_angle_offset_from_request_rad": 0.0,
+              "physical_front_wheel_angle_rate_bounds_rad_per_s": {
+                "lower": -0.7,
+                "upper": 0.8
+              },
+              "requested_front_wheel_angle_magnitude_limit_rad": 0.6
+            }
+          },
+          "initial_state_config": {
+            "bounds": {
+              "body_motion": {
+                "lateral_velocity_mps": {
+                  "lower": 0.0,
+                  "upper": 0.0
+                },
+                "longitudinal_velocity_mps": {
+                  "lower": 15.0,
+                  "upper": 15.0
+                },
+                "yaw_rate_rad_per_s": {
+                  "lower": 0.0,
+                  "upper": 0.0
+                }
+              },
+              "front_wheel_steering_angle_rad": {
+                "lower": 0.0,
+                "upper": 0.0
+              },
+              "world_pose": {
+                "heading_rad": {
+                  "lower": 0.0,
+                  "upper": 0.0
+                },
+                "x_m": {
+                  "lower": 2.0,
+                  "upper": 2.0
+                },
+                "y_m": {
+                  "lower": 0.0,
+                  "upper": 0.0
+                }
+              }
+            },
+            "reference_line_progress_search": null
+          },
+          "integration_config": {
+            "environment_step_duration_s": 0.1,
+            "method": "rk4",
+            "substep_count": 1
+          },
+          "internal_policy_config": {
+            "action_interface": "full",
+            "cruise_control": {
+              "enabled": false
+            },
+            "lane_keeping": {
+              "enabled": false
+            }
+          },
+          "observation_config": {
+            "body_longitudinal_velocity_mps": {
+              "destination": "observation",
+              "scaling_factor": 1.0
+            },
+            "front_wheel_steering_angle_rad": {
+              "destination": "observation",
+              "scaling_factor": 1.0
+            },
+            "heading_error_from_target_line_rad": {
+              "destination": "observation",
+              "scaling_factor": 1.0
+            },
+            "lateral_error_from_target_line_m": {
+              "destination": "observation",
+              "scaling_factor": 1.0
+            },
+            "next_recommended_speed_change": {
+              "reference_line_distance_m": {
+                "destination": "observation",
+                "scaling_factor": 1.0
+              },
+              "value_mps": {
+                "destination": "observation",
+                "scaling_factor": 1.0
+              }
+            },
+            "recommended_speed_mps": {
+              "destination": "observation",
+              "scaling_factor": 1.0
+            }
+          },
+          "observation_format": "dict",
+          "render_mode": null,
+          "road_spec": {
+            "elements": [
+              {
+                "geometry": {
+                  "length_m": 40.0,
+                  "type": "straight"
+                },
+                "speed_limit_kph": 72.0
+              },
+              {
+                "geometry": {
+                  "length_m": 80.0,
+                  "type": "straight"
+                },
+                "speed_limit_kph": 54.0
+              }
+            ]
+          },
+          "target_line_config": {
+            "mode": "reference_line"
+          },
+          "termination_config": {
+            "absolute_lateral_error_from_target_line_upper_bound_m": 100.0,
+            "planar_speed_bounds_mps": {
+              "lower": 0.0,
+              "upper": 100.0
+            }
+          }
+        },
+        "expected_fixture_digest": "b3b6a828eb20640199a7e6d750287769e27938c06eac2e506aafadd5482d6cf8",
+        "generation_seed": 0,
+        "sequence_length": 4,
+        "step_actions": [
+          [
+            0.05,
+            -0.02
+          ],
+          [
+            0.06,
+            -0.01
+          ],
+          [
+            0.07,
+            0.0
+          ]
+        ],
+        "version": "dreamgym-mpc-fixture-sequence-v1"
+      },
+      "live_session_fingerprint": "8502bf408be733654e3ae97a9e6909aedb3da6035ba54d6336c32debbfc13b81",
+      "measurement_segment_id": "measurement-da4fd9895f544d4498423068521cdae8",
+      "raw_samples": {
+        "measurement_segment_id": "measurement-da4fd9895f544d4498423068521cdae8",
+        "path": "cases/execution-52839be8c1432423ea06e689f554a5e76b368c3c53b193d71219fa35e3862228/measurement-da4fd9895f544d4498423068521cdae8.npz",
+        "sha256": "00203907179892ba85e5eca324b37d06cd67e8514b22435f4bcf6cb8042bafc8"
+      },
+      "required": true,
+      "result_schema_version": "dreamgym-profile-results-v1",
+      "run_attempt_id": "attempt-e58ba3eaa6104e88a61519f6c7f14c5f",
+      "semantic_case_digest": "4142270e00a62c07283ce29537ea8a0aeed5d64c90e2ff343ae3c08a40b1b1b3",
+      "semantic_case_id": "mpc-steering_rate-h50-soft-on-4142270e00a62c07283ce29537ea8a0aeed5d64c90e2ff343ae3c08a40b1b1b3",
+      "semantic_projection": {
+        "mpc": {
+          "fixture_sequence": {
+            "environment": {
+              "bicycle_model_config": {
+                "axle_geometry": {
+                  "front_axle_distance_from_center_of_mass_m": 1.25,
+                  "rear_axle_distance_from_center_of_mass_m": 1.75
+                },
+                "kinematic_dynamic_transition": {
+                  "body_longitudinal_speed_range_mps": {
+                    "lower": 1000.0,
+                    "upper": 1001.0
+                  }
+                },
+                "longitudinal_force_model": {
+                  "normalized_motor_command_force_gain_n": 2400.0,
+                  "quadratic_aerodynamic_drag_coefficient_kg_per_m": 0.0
+                },
+                "mass_properties": {
+                  "mass_kg": 1200.0,
+                  "yaw_moment_of_inertia_kg_m2": 1800.0
+                },
+                "steering": {
+                  "physical_front_wheel_angle_offset_from_request_rad": 0.0,
+                  "physical_front_wheel_angle_rate_bounds_rad_per_s": {
+                    "lower": -0.7,
+                    "upper": 0.8
+                  },
+                  "requested_front_wheel_angle_magnitude_limit_rad": 0.6
+                }
+              },
+              "initial_state_config": {
+                "bounds": {
+                  "body_motion": {
+                    "lateral_velocity_mps": {
+                      "lower": 0.0,
+                      "upper": 0.0
+                    },
+                    "longitudinal_velocity_mps": {
+                      "lower": 15.0,
+                      "upper": 15.0
+                    },
+                    "yaw_rate_rad_per_s": {
+                      "lower": 0.0,
+                      "upper": 0.0
+                    }
+                  },
+                  "front_wheel_steering_angle_rad": {
+                    "lower": 0.0,
+                    "upper": 0.0
+                  },
+                  "world_pose": {
+                    "heading_rad": {
+                      "lower": 0.0,
+                      "upper": 0.0
+                    },
+                    "x_m": {
+                      "lower": 2.0,
+                      "upper": 2.0
+                    },
+                    "y_m": {
+                      "lower": 0.0,
+                      "upper": 0.0
+                    }
+                  }
+                },
+                "reference_line_progress_search": null
+              },
+              "integration_config": {
+                "environment_step_duration_s": 0.1,
+                "method": "rk4",
+                "substep_count": 1
+              },
+              "internal_policy_config": {
+                "action_interface": "full",
+                "cruise_control": {
+                  "enabled": false
+                },
+                "lane_keeping": {
+                  "enabled": false
+                }
+              },
+              "observation_config": {
+                "body_longitudinal_velocity_mps": {
+                  "destination": "observation",
+                  "scaling_factor": 1.0
+                },
+                "front_wheel_steering_angle_rad": {
+                  "destination": "observation",
+                  "scaling_factor": 1.0
+                },
+                "heading_error_from_target_line_rad": {
+                  "destination": "observation",
+                  "scaling_factor": 1.0
+                },
+                "lateral_error_from_target_line_m": {
+                  "destination": "observation",
+                  "scaling_factor": 1.0
+                },
+                "next_recommended_speed_change": {
+                  "reference_line_distance_m": {
+                    "destination": "observation",
+                    "scaling_factor": 1.0
+                  },
+                  "value_mps": {
+                    "destination": "observation",
+                    "scaling_factor": 1.0
+                  }
+                },
+                "recommended_speed_mps": {
+                  "destination": "observation",
+                  "scaling_factor": 1.0
+                }
+              },
+              "observation_format": "dict",
+              "render_mode": null,
+              "road_spec": {
+                "elements": [
+                  {
+                    "geometry": {
+                      "length_m": 40.0,
+                      "type": "straight"
+                    },
+                    "speed_limit_kph": 72.0
+                  },
+                  {
+                    "geometry": {
+                      "length_m": 80.0,
+                      "type": "straight"
+                    },
+                    "speed_limit_kph": 54.0
+                  }
+                ]
+              },
+              "target_line_config": {
+                "mode": "reference_line"
+              },
+              "termination_config": {
+                "absolute_lateral_error_from_target_line_upper_bound_m": 100.0,
+                "planar_speed_bounds_mps": {
+                  "lower": 0.0,
+                  "upper": 100.0
+                }
+              }
+            },
+            "expected_fixture_digest": "b3b6a828eb20640199a7e6d750287769e27938c06eac2e506aafadd5482d6cf8",
+            "generation_seed": 0,
+            "sequence_length": 4,
+            "step_actions": [
+              [
+                0.05,
+                -0.02
+              ],
+              [
+                0.06,
+                -0.01
+              ],
+              [
+                0.07,
+                0.0
+              ]
+            ],
+            "version": "dreamgym-mpc-fixture-sequence-v1"
+          },
+          "policy": "steering_rate",
+          "prediction_horizon_steps": 50,
+          "road_aware": false,
+          "soft_constraints": "on"
+        },
+        "suite": "mpc"
+      },
+      "semantic_projection_digest": "4142270e00a62c07283ce29537ea8a0aeed5d64c90e2ff343ae3c08a40b1b1b3",
+      "semantic_projection_version": "dreamgym-case-record-semantic-projection-v1",
+      "structured_records": {
+        "measurement_segment_id": "measurement-da4fd9895f544d4498423068521cdae8",
+        "path": "cases/execution-52839be8c1432423ea06e689f554a5e76b368c3c53b193d71219fa35e3862228/measurement-da4fd9895f544d4498423068521cdae8.records.json",
+        "sha256": "a2592841d40ba095da516f6e3c429c5734d25b581e973baf18a5f291fbebaa40"
+      },
+      "suite": "mpc",
+      "timing_protocol": {
+        "clock": "perf_counter_ns",
+        "version": "dreamgym-mpc-solve-timing-v1"
+      },
+      "timing_protocol_digest": "39075c3cc0ccfd18058f44127f386cc9ec28806b5969d5c485eab2d64fa21124",
+      "timing_validity": {
+        "status": "valid",
+        "valid": true
+      }
+    },
+    "execution-881534ff627f6fe73db60a4495ff968ea23b16a2c5d119dce713965b9ee63664": {
+      "benchmark_release": "custom",
+      "case_id": "execution-881534ff627f6fe73db60a4495ff968ea23b16a2c5d119dce713965b9ee63664",
+      "category": "mpc-steering_rate-h30-soft-on",
+      "eligibility": {
+        "sample_aggregation": true,
+        "semantic_reuse_import": true
+      },
+      "execution_spec": {
+        "candidate_execution": false,
+        "execution_spec_version": "dreamgym-mpc-execution-v1",
+        "repetitions": 3,
+        "required": true,
+        "sample_count": 100,
+        "warmup_iterations": 50
+      },
+      "execution_spec_digest": "caa8331b63c03a149b8338e892acf6bb0f1e56fe37c3344af3361180b24b5090",
+      "fixed_seeds": {
+        "generation_seed": 0
+      },
+      "fixture_identity": {
+        "environment": {
+          "bicycle_model_config": {
+            "axle_geometry": {
+              "front_axle_distance_from_center_of_mass_m": 1.25,
+              "rear_axle_distance_from_center_of_mass_m": 1.75
+            },
+            "kinematic_dynamic_transition": {
+              "body_longitudinal_speed_range_mps": {
+                "lower": 1000.0,
+                "upper": 1001.0
+              }
+            },
+            "longitudinal_force_model": {
+              "normalized_motor_command_force_gain_n": 2400.0,
+              "quadratic_aerodynamic_drag_coefficient_kg_per_m": 0.0
+            },
+            "mass_properties": {
+              "mass_kg": 1200.0,
+              "yaw_moment_of_inertia_kg_m2": 1800.0
+            },
+            "steering": {
+              "physical_front_wheel_angle_offset_from_request_rad": 0.0,
+              "physical_front_wheel_angle_rate_bounds_rad_per_s": {
+                "lower": -0.7,
+                "upper": 0.8
+              },
+              "requested_front_wheel_angle_magnitude_limit_rad": 0.6
+            }
+          },
+          "initial_state_config": {
+            "bounds": {
+              "body_motion": {
+                "lateral_velocity_mps": {
+                  "lower": 0.0,
+                  "upper": 0.0
+                },
+                "longitudinal_velocity_mps": {
+                  "lower": 15.0,
+                  "upper": 15.0
+                },
+                "yaw_rate_rad_per_s": {
+                  "lower": 0.0,
+                  "upper": 0.0
+                }
+              },
+              "front_wheel_steering_angle_rad": {
+                "lower": 0.0,
+                "upper": 0.0
+              },
+              "world_pose": {
+                "heading_rad": {
+                  "lower": 0.0,
+                  "upper": 0.0
+                },
+                "x_m": {
+                  "lower": 2.0,
+                  "upper": 2.0
+                },
+                "y_m": {
+                  "lower": 0.0,
+                  "upper": 0.0
+                }
+              }
+            },
+            "reference_line_progress_search": null
+          },
+          "integration_config": {
+            "environment_step_duration_s": 0.1,
+            "method": "rk4",
+            "substep_count": 1
+          },
+          "internal_policy_config": {
+            "action_interface": "full",
+            "cruise_control": {
+              "enabled": false
+            },
+            "lane_keeping": {
+              "enabled": false
+            }
+          },
+          "observation_config": {
+            "body_longitudinal_velocity_mps": {
+              "destination": "observation",
+              "scaling_factor": 1.0
+            },
+            "front_wheel_steering_angle_rad": {
+              "destination": "observation",
+              "scaling_factor": 1.0
+            },
+            "heading_error_from_target_line_rad": {
+              "destination": "observation",
+              "scaling_factor": 1.0
+            },
+            "lateral_error_from_target_line_m": {
+              "destination": "observation",
+              "scaling_factor": 1.0
+            },
+            "next_recommended_speed_change": {
+              "reference_line_distance_m": {
+                "destination": "observation",
+                "scaling_factor": 1.0
+              },
+              "value_mps": {
+                "destination": "observation",
+                "scaling_factor": 1.0
+              }
+            },
+            "recommended_speed_mps": {
+              "destination": "observation",
+              "scaling_factor": 1.0
+            }
+          },
+          "observation_format": "dict",
+          "render_mode": null,
+          "road_spec": {
+            "elements": [
+              {
+                "geometry": {
+                  "length_m": 40.0,
+                  "type": "straight"
+                },
+                "speed_limit_kph": 72.0
+              },
+              {
+                "geometry": {
+                  "length_m": 80.0,
+                  "type": "straight"
+                },
+                "speed_limit_kph": 54.0
+              }
+            ]
+          },
+          "target_line_config": {
+            "mode": "reference_line"
+          },
+          "termination_config": {
+            "absolute_lateral_error_from_target_line_upper_bound_m": 100.0,
+            "planar_speed_bounds_mps": {
+              "lower": 0.0,
+              "upper": 100.0
+            }
+          }
+        },
+        "expected_fixture_digest": "b3b6a828eb20640199a7e6d750287769e27938c06eac2e506aafadd5482d6cf8",
+        "generation_seed": 0,
+        "sequence_length": 4,
+        "step_actions": [
+          [
+            0.05,
+            -0.02
+          ],
+          [
+            0.06,
+            -0.01
+          ],
+          [
+            0.07,
+            0.0
+          ]
+        ],
+        "version": "dreamgym-mpc-fixture-sequence-v1"
+      },
+      "live_session_fingerprint": "8502bf408be733654e3ae97a9e6909aedb3da6035ba54d6336c32debbfc13b81",
+      "measurement_segment_id": "measurement-b07a88548e314e2782ce1475abf575f9",
+      "raw_samples": {
+        "measurement_segment_id": "measurement-b07a88548e314e2782ce1475abf575f9",
+        "path": "cases/execution-881534ff627f6fe73db60a4495ff968ea23b16a2c5d119dce713965b9ee63664/measurement-b07a88548e314e2782ce1475abf575f9.npz",
+        "sha256": "a293cd146054fc605fd4d10c9b4443a461d95be923538ae3387c482021df2dd1"
+      },
+      "required": true,
+      "result_schema_version": "dreamgym-profile-results-v1",
+      "run_attempt_id": "attempt-e58ba3eaa6104e88a61519f6c7f14c5f",
+      "semantic_case_digest": "842c14d551ee95b4baac8c4cf4dc45c58a7814bd8707a3fa49873986608c259a",
+      "semantic_case_id": "mpc-steering_rate-h30-soft-on-842c14d551ee95b4baac8c4cf4dc45c58a7814bd8707a3fa49873986608c259a",
+      "semantic_projection": {
+        "mpc": {
+          "fixture_sequence": {
+            "environment": {
+              "bicycle_model_config": {
+                "axle_geometry": {
+                  "front_axle_distance_from_center_of_mass_m": 1.25,
+                  "rear_axle_distance_from_center_of_mass_m": 1.75
+                },
+                "kinematic_dynamic_transition": {
+                  "body_longitudinal_speed_range_mps": {
+                    "lower": 1000.0,
+                    "upper": 1001.0
+                  }
+                },
+                "longitudinal_force_model": {
+                  "normalized_motor_command_force_gain_n": 2400.0,
+                  "quadratic_aerodynamic_drag_coefficient_kg_per_m": 0.0
+                },
+                "mass_properties": {
+                  "mass_kg": 1200.0,
+                  "yaw_moment_of_inertia_kg_m2": 1800.0
+                },
+                "steering": {
+                  "physical_front_wheel_angle_offset_from_request_rad": 0.0,
+                  "physical_front_wheel_angle_rate_bounds_rad_per_s": {
+                    "lower": -0.7,
+                    "upper": 0.8
+                  },
+                  "requested_front_wheel_angle_magnitude_limit_rad": 0.6
+                }
+              },
+              "initial_state_config": {
+                "bounds": {
+                  "body_motion": {
+                    "lateral_velocity_mps": {
+                      "lower": 0.0,
+                      "upper": 0.0
+                    },
+                    "longitudinal_velocity_mps": {
+                      "lower": 15.0,
+                      "upper": 15.0
+                    },
+                    "yaw_rate_rad_per_s": {
+                      "lower": 0.0,
+                      "upper": 0.0
+                    }
+                  },
+                  "front_wheel_steering_angle_rad": {
+                    "lower": 0.0,
+                    "upper": 0.0
+                  },
+                  "world_pose": {
+                    "heading_rad": {
+                      "lower": 0.0,
+                      "upper": 0.0
+                    },
+                    "x_m": {
+                      "lower": 2.0,
+                      "upper": 2.0
+                    },
+                    "y_m": {
+                      "lower": 0.0,
+                      "upper": 0.0
+                    }
+                  }
+                },
+                "reference_line_progress_search": null
+              },
+              "integration_config": {
+                "environment_step_duration_s": 0.1,
+                "method": "rk4",
+                "substep_count": 1
+              },
+              "internal_policy_config": {
+                "action_interface": "full",
+                "cruise_control": {
+                  "enabled": false
+                },
+                "lane_keeping": {
+                  "enabled": false
+                }
+              },
+              "observation_config": {
+                "body_longitudinal_velocity_mps": {
+                  "destination": "observation",
+                  "scaling_factor": 1.0
+                },
+                "front_wheel_steering_angle_rad": {
+                  "destination": "observation",
+                  "scaling_factor": 1.0
+                },
+                "heading_error_from_target_line_rad": {
+                  "destination": "observation",
+                  "scaling_factor": 1.0
+                },
+                "lateral_error_from_target_line_m": {
+                  "destination": "observation",
+                  "scaling_factor": 1.0
+                },
+                "next_recommended_speed_change": {
+                  "reference_line_distance_m": {
+                    "destination": "observation",
+                    "scaling_factor": 1.0
+                  },
+                  "value_mps": {
+                    "destination": "observation",
+                    "scaling_factor": 1.0
+                  }
+                },
+                "recommended_speed_mps": {
+                  "destination": "observation",
+                  "scaling_factor": 1.0
+                }
+              },
+              "observation_format": "dict",
+              "render_mode": null,
+              "road_spec": {
+                "elements": [
+                  {
+                    "geometry": {
+                      "length_m": 40.0,
+                      "type": "straight"
+                    },
+                    "speed_limit_kph": 72.0
+                  },
+                  {
+                    "geometry": {
+                      "length_m": 80.0,
+                      "type": "straight"
+                    },
+                    "speed_limit_kph": 54.0
+                  }
+                ]
+              },
+              "target_line_config": {
+                "mode": "reference_line"
+              },
+              "termination_config": {
+                "absolute_lateral_error_from_target_line_upper_bound_m": 100.0,
+                "planar_speed_bounds_mps": {
+                  "lower": 0.0,
+                  "upper": 100.0
+                }
+              }
+            },
+            "expected_fixture_digest": "b3b6a828eb20640199a7e6d750287769e27938c06eac2e506aafadd5482d6cf8",
+            "generation_seed": 0,
+            "sequence_length": 4,
+            "step_actions": [
+              [
+                0.05,
+                -0.02
+              ],
+              [
+                0.06,
+                -0.01
+              ],
+              [
+                0.07,
+                0.0
+              ]
+            ],
+            "version": "dreamgym-mpc-fixture-sequence-v1"
+          },
+          "policy": "steering_rate",
+          "prediction_horizon_steps": 30,
+          "road_aware": false,
+          "soft_constraints": "on"
+        },
+        "suite": "mpc"
+      },
+      "semantic_projection_digest": "842c14d551ee95b4baac8c4cf4dc45c58a7814bd8707a3fa49873986608c259a",
+      "semantic_projection_version": "dreamgym-case-record-semantic-projection-v1",
+      "structured_records": {
+        "measurement_segment_id": "measurement-b07a88548e314e2782ce1475abf575f9",
+        "path": "cases/execution-881534ff627f6fe73db60a4495ff968ea23b16a2c5d119dce713965b9ee63664/measurement-b07a88548e314e2782ce1475abf575f9.records.json",
+        "sha256": "091a11f1eee15fc33f968d35ee5cdc1f8748ab753c841c267198dbe5a0badc7f"
+      },
+      "suite": "mpc",
+      "timing_protocol": {
+        "clock": "perf_counter_ns",
+        "version": "dreamgym-mpc-solve-timing-v1"
+      },
+      "timing_protocol_digest": "39075c3cc0ccfd18058f44127f386cc9ec28806b5969d5c485eab2d64fa21124",
+      "timing_validity": {
+        "status": "valid",
+        "valid": true
+      }
+    },
+    "execution-b6a0d0247ac257c66641f8c701d07e42bde9715fc2c0e55211c6ed816560df20": {
+      "benchmark_release": "custom",
+      "case_id": "execution-b6a0d0247ac257c66641f8c701d07e42bde9715fc2c0e55211c6ed816560df20",
+      "category": "mpc-steering_rate-h10-soft-on",
+      "eligibility": {
+        "sample_aggregation": true,
+        "semantic_reuse_import": true
+      },
+      "execution_spec": {
+        "candidate_execution": false,
+        "execution_spec_version": "dreamgym-mpc-execution-v1",
+        "repetitions": 3,
+        "required": true,
+        "sample_count": 100,
+        "warmup_iterations": 50
+      },
+      "execution_spec_digest": "caa8331b63c03a149b8338e892acf6bb0f1e56fe37c3344af3361180b24b5090",
+      "fixed_seeds": {
+        "generation_seed": 0
+      },
+      "fixture_identity": {
+        "environment": {
+          "bicycle_model_config": {
+            "axle_geometry": {
+              "front_axle_distance_from_center_of_mass_m": 1.25,
+              "rear_axle_distance_from_center_of_mass_m": 1.75
+            },
+            "kinematic_dynamic_transition": {
+              "body_longitudinal_speed_range_mps": {
+                "lower": 1000.0,
+                "upper": 1001.0
+              }
+            },
+            "longitudinal_force_model": {
+              "normalized_motor_command_force_gain_n": 2400.0,
+              "quadratic_aerodynamic_drag_coefficient_kg_per_m": 0.0
+            },
+            "mass_properties": {
+              "mass_kg": 1200.0,
+              "yaw_moment_of_inertia_kg_m2": 1800.0
+            },
+            "steering": {
+              "physical_front_wheel_angle_offset_from_request_rad": 0.0,
+              "physical_front_wheel_angle_rate_bounds_rad_per_s": {
+                "lower": -0.7,
+                "upper": 0.8
+              },
+              "requested_front_wheel_angle_magnitude_limit_rad": 0.6
+            }
+          },
+          "initial_state_config": {
+            "bounds": {
+              "body_motion": {
+                "lateral_velocity_mps": {
+                  "lower": 0.0,
+                  "upper": 0.0
+                },
+                "longitudinal_velocity_mps": {
+                  "lower": 15.0,
+                  "upper": 15.0
+                },
+                "yaw_rate_rad_per_s": {
+                  "lower": 0.0,
+                  "upper": 0.0
+                }
+              },
+              "front_wheel_steering_angle_rad": {
+                "lower": 0.0,
+                "upper": 0.0
+              },
+              "world_pose": {
+                "heading_rad": {
+                  "lower": 0.0,
+                  "upper": 0.0
+                },
+                "x_m": {
+                  "lower": 2.0,
+                  "upper": 2.0
+                },
+                "y_m": {
+                  "lower": 0.0,
+                  "upper": 0.0
+                }
+              }
+            },
+            "reference_line_progress_search": null
+          },
+          "integration_config": {
+            "environment_step_duration_s": 0.1,
+            "method": "rk4",
+            "substep_count": 1
+          },
+          "internal_policy_config": {
+            "action_interface": "full",
+            "cruise_control": {
+              "enabled": false
+            },
+            "lane_keeping": {
+              "enabled": false
+            }
+          },
+          "observation_config": {
+            "body_longitudinal_velocity_mps": {
+              "destination": "observation",
+              "scaling_factor": 1.0
+            },
+            "front_wheel_steering_angle_rad": {
+              "destination": "observation",
+              "scaling_factor": 1.0
+            },
+            "heading_error_from_target_line_rad": {
+              "destination": "observation",
+              "scaling_factor": 1.0
+            },
+            "lateral_error_from_target_line_m": {
+              "destination": "observation",
+              "scaling_factor": 1.0
+            },
+            "next_recommended_speed_change": {
+              "reference_line_distance_m": {
+                "destination": "observation",
+                "scaling_factor": 1.0
+              },
+              "value_mps": {
+                "destination": "observation",
+                "scaling_factor": 1.0
+              }
+            },
+            "recommended_speed_mps": {
+              "destination": "observation",
+              "scaling_factor": 1.0
+            }
+          },
+          "observation_format": "dict",
+          "render_mode": null,
+          "road_spec": {
+            "elements": [
+              {
+                "geometry": {
+                  "length_m": 40.0,
+                  "type": "straight"
+                },
+                "speed_limit_kph": 72.0
+              },
+              {
+                "geometry": {
+                  "length_m": 80.0,
+                  "type": "straight"
+                },
+                "speed_limit_kph": 54.0
+              }
+            ]
+          },
+          "target_line_config": {
+            "mode": "reference_line"
+          },
+          "termination_config": {
+            "absolute_lateral_error_from_target_line_upper_bound_m": 100.0,
+            "planar_speed_bounds_mps": {
+              "lower": 0.0,
+              "upper": 100.0
+            }
+          }
+        },
+        "expected_fixture_digest": "b3b6a828eb20640199a7e6d750287769e27938c06eac2e506aafadd5482d6cf8",
+        "generation_seed": 0,
+        "sequence_length": 4,
+        "step_actions": [
+          [
+            0.05,
+            -0.02
+          ],
+          [
+            0.06,
+            -0.01
+          ],
+          [
+            0.07,
+            0.0
+          ]
+        ],
+        "version": "dreamgym-mpc-fixture-sequence-v1"
+      },
+      "live_session_fingerprint": "8502bf408be733654e3ae97a9e6909aedb3da6035ba54d6336c32debbfc13b81",
+      "measurement_segment_id": "measurement-92f71a8f2b8c45f9912d33006c89bea7",
+      "raw_samples": {
+        "measurement_segment_id": "measurement-92f71a8f2b8c45f9912d33006c89bea7",
+        "path": "cases/execution-b6a0d0247ac257c66641f8c701d07e42bde9715fc2c0e55211c6ed816560df20/measurement-92f71a8f2b8c45f9912d33006c89bea7.npz",
+        "sha256": "0ebc36d35c7da9b27f05efeee4d326ca7d6890cd93d094eadbbe37fd0237ac51"
+      },
+      "required": true,
+      "result_schema_version": "dreamgym-profile-results-v1",
+      "run_attempt_id": "attempt-e58ba3eaa6104e88a61519f6c7f14c5f",
+      "semantic_case_digest": "b5a8185f57b48c7e9216007131d3d8364f35a0d5c26997746b08266a784d941e",
+      "semantic_case_id": "mpc-steering_rate-h10-soft-on-b5a8185f57b48c7e9216007131d3d8364f35a0d5c26997746b08266a784d941e",
+      "semantic_projection": {
+        "mpc": {
+          "fixture_sequence": {
+            "environment": {
+              "bicycle_model_config": {
+                "axle_geometry": {
+                  "front_axle_distance_from_center_of_mass_m": 1.25,
+                  "rear_axle_distance_from_center_of_mass_m": 1.75
+                },
+                "kinematic_dynamic_transition": {
+                  "body_longitudinal_speed_range_mps": {
+                    "lower": 1000.0,
+                    "upper": 1001.0
+                  }
+                },
+                "longitudinal_force_model": {
+                  "normalized_motor_command_force_gain_n": 2400.0,
+                  "quadratic_aerodynamic_drag_coefficient_kg_per_m": 0.0
+                },
+                "mass_properties": {
+                  "mass_kg": 1200.0,
+                  "yaw_moment_of_inertia_kg_m2": 1800.0
+                },
+                "steering": {
+                  "physical_front_wheel_angle_offset_from_request_rad": 0.0,
+                  "physical_front_wheel_angle_rate_bounds_rad_per_s": {
+                    "lower": -0.7,
+                    "upper": 0.8
+                  },
+                  "requested_front_wheel_angle_magnitude_limit_rad": 0.6
+                }
+              },
+              "initial_state_config": {
+                "bounds": {
+                  "body_motion": {
+                    "lateral_velocity_mps": {
+                      "lower": 0.0,
+                      "upper": 0.0
+                    },
+                    "longitudinal_velocity_mps": {
+                      "lower": 15.0,
+                      "upper": 15.0
+                    },
+                    "yaw_rate_rad_per_s": {
+                      "lower": 0.0,
+                      "upper": 0.0
+                    }
+                  },
+                  "front_wheel_steering_angle_rad": {
+                    "lower": 0.0,
+                    "upper": 0.0
+                  },
+                  "world_pose": {
+                    "heading_rad": {
+                      "lower": 0.0,
+                      "upper": 0.0
+                    },
+                    "x_m": {
+                      "lower": 2.0,
+                      "upper": 2.0
+                    },
+                    "y_m": {
+                      "lower": 0.0,
+                      "upper": 0.0
+                    }
+                  }
+                },
+                "reference_line_progress_search": null
+              },
+              "integration_config": {
+                "environment_step_duration_s": 0.1,
+                "method": "rk4",
+                "substep_count": 1
+              },
+              "internal_policy_config": {
+                "action_interface": "full",
+                "cruise_control": {
+                  "enabled": false
+                },
+                "lane_keeping": {
+                  "enabled": false
+                }
+              },
+              "observation_config": {
+                "body_longitudinal_velocity_mps": {
+                  "destination": "observation",
+                  "scaling_factor": 1.0
+                },
+                "front_wheel_steering_angle_rad": {
+                  "destination": "observation",
+                  "scaling_factor": 1.0
+                },
+                "heading_error_from_target_line_rad": {
+                  "destination": "observation",
+                  "scaling_factor": 1.0
+                },
+                "lateral_error_from_target_line_m": {
+                  "destination": "observation",
+                  "scaling_factor": 1.0
+                },
+                "next_recommended_speed_change": {
+                  "reference_line_distance_m": {
+                    "destination": "observation",
+                    "scaling_factor": 1.0
+                  },
+                  "value_mps": {
+                    "destination": "observation",
+                    "scaling_factor": 1.0
+                  }
+                },
+                "recommended_speed_mps": {
+                  "destination": "observation",
+                  "scaling_factor": 1.0
+                }
+              },
+              "observation_format": "dict",
+              "render_mode": null,
+              "road_spec": {
+                "elements": [
+                  {
+                    "geometry": {
+                      "length_m": 40.0,
+                      "type": "straight"
+                    },
+                    "speed_limit_kph": 72.0
+                  },
+                  {
+                    "geometry": {
+                      "length_m": 80.0,
+                      "type": "straight"
+                    },
+                    "speed_limit_kph": 54.0
+                  }
+                ]
+              },
+              "target_line_config": {
+                "mode": "reference_line"
+              },
+              "termination_config": {
+                "absolute_lateral_error_from_target_line_upper_bound_m": 100.0,
+                "planar_speed_bounds_mps": {
+                  "lower": 0.0,
+                  "upper": 100.0
+                }
+              }
+            },
+            "expected_fixture_digest": "b3b6a828eb20640199a7e6d750287769e27938c06eac2e506aafadd5482d6cf8",
+            "generation_seed": 0,
+            "sequence_length": 4,
+            "step_actions": [
+              [
+                0.05,
+                -0.02
+              ],
+              [
+                0.06,
+                -0.01
+              ],
+              [
+                0.07,
+                0.0
+              ]
+            ],
+            "version": "dreamgym-mpc-fixture-sequence-v1"
+          },
+          "policy": "steering_rate",
+          "prediction_horizon_steps": 10,
+          "road_aware": false,
+          "soft_constraints": "on"
+        },
+        "suite": "mpc"
+      },
+      "semantic_projection_digest": "b5a8185f57b48c7e9216007131d3d8364f35a0d5c26997746b08266a784d941e",
+      "semantic_projection_version": "dreamgym-case-record-semantic-projection-v1",
+      "structured_records": {
+        "measurement_segment_id": "measurement-92f71a8f2b8c45f9912d33006c89bea7",
+        "path": "cases/execution-b6a0d0247ac257c66641f8c701d07e42bde9715fc2c0e55211c6ed816560df20/measurement-92f71a8f2b8c45f9912d33006c89bea7.records.json",
+        "sha256": "318a2c11756d4cfc62d95830cd1cbb8fdbf9f0db8d3cd7262cc317e03b3c705a"
+      },
+      "suite": "mpc",
+      "timing_protocol": {
+        "clock": "perf_counter_ns",
+        "version": "dreamgym-mpc-solve-timing-v1"
+      },
+      "timing_protocol_digest": "39075c3cc0ccfd18058f44127f386cc9ec28806b5969d5c485eab2d64fa21124",
+      "timing_validity": {
+        "status": "valid",
+        "valid": true
+      }
+    }
+  },
+  "compatibility": {
+    "dependency_compatibility_digest": "52f78aee21bd5749999d985712b9fae472be8bd3d57a4b65cbf0a2a673f8c974",
+    "device_compatibility_digest": "d570004a0f69d68d72c455b105503cb34c32f7a1e4d73750e834590c819d8ad7",
+    "live_session_fingerprint": "8502bf408be733654e3ae97a9e6909aedb3da6035ba54d6336c32debbfc13b81",
+    "runtime_hardware_compatibility_digest": "16f634e020a65c8f6b0c86b34fdc404704e176bdc9a63daa2c85579aa975d25b"
+  },
+  "configurations": {},
+  "current_run_attempt_id": "attempt-e58ba3eaa6104e88a61519f6c7f14c5f",
+  "metadata": {
+    "architecture": "arm64",
+    "cpu": {
+      "description": "arm",
+      "logical_cores": 12,
+      "physical_cores": null
+    },
+    "dependencies": {
+      "dreamgym": "0.2.2",
+      "gymnasium": "1.3.0",
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "stable_baselines3": "2.9.0",
+      "torch": "2.13.0"
+    },
+    "dependency_compatibility_digest": "52f78aee21bd5749999d985712b9fae472be8bd3d57a4b65cbf0a2a673f8c974",
+    "device_compatibility_digest": "d570004a0f69d68d72c455b105503cb34c32f7a1e4d73750e834590c819d8ad7",
+    "environment_classification": "local",
+    "live_session_fingerprint": "8502bf408be733654e3ae97a9e6909aedb3da6035ba54d6336c32debbfc13b81",
+    "memory": {
+      "total_bytes": 25769803776
+    },
+    "os": {
+      "name": "Darwin",
+      "version": "25.5.0"
+    },
+    "python": {
+      "implementation": "CPython",
+      "version": "3.12.14"
+    },
+    "rl_device": {
+      "observed": null,
+      "requested": null,
+      "resolved": null
+    },
+    "runtime_hardware_compatibility_digest": "16f634e020a65c8f6b0c86b34fdc404704e176bdc9a63daa2c85579aa975d25b",
+    "schema_version": "dreamgym-profile-metadata-v1",
+    "threads": {
+      "logical_cpu_count": 12,
+      "torch_interop": null,
+      "torch_intraop": null
+    }
+  },
+  "run_attempts": {
+    "attempt-e58ba3eaa6104e88a61519f6c7f14c5f": {
+      "case_attempts": [
+        {
+          "case_id": "execution-b6a0d0247ac257c66641f8c701d07e42bde9715fc2c0e55211c6ed816560df20",
+          "measurement_segment_id": "measurement-92f71a8f2b8c45f9912d33006c89bea7",
+          "status": "completed"
+        },
+        {
+          "case_id": "execution-881534ff627f6fe73db60a4495ff968ea23b16a2c5d119dce713965b9ee63664",
+          "measurement_segment_id": "measurement-b07a88548e314e2782ce1475abf575f9",
+          "status": "completed"
+        },
+        {
+          "case_id": "execution-52839be8c1432423ea06e689f554a5e76b368c3c53b193d71219fa35e3862228",
+          "measurement_segment_id": "measurement-da4fd9895f544d4498423068521cdae8",
+          "status": "completed"
+        }
+      ],
+      "completed_case_ids": [
+        "execution-b6a0d0247ac257c66641f8c701d07e42bde9715fc2c0e55211c6ed816560df20",
+        "execution-881534ff627f6fe73db60a4495ff968ea23b16a2c5d119dce713965b9ee63664",
+        "execution-52839be8c1432423ea06e689f554a5e76b368c3c53b193d71219fa35e3862228"
+      ],
+      "ended_at_utc": "2026-09-01T01:18:53.649830Z",
+      "expected_case_ids": [
+        "execution-b6a0d0247ac257c66641f8c701d07e42bde9715fc2c0e55211c6ed816560df20",
+        "execution-881534ff627f6fe73db60a4495ff968ea23b16a2c5d119dce713965b9ee63664",
+        "execution-52839be8c1432423ea06e689f554a5e76b368c3c53b193d71219fa35e3862228"
+      ],
+      "fatal": false,
+      "run_attempt_id": "attempt-e58ba3eaa6104e88a61519f6c7f14c5f",
+      "started_at_utc": "2026-09-01T01:18:41.815197Z",
+      "status": "successful",
+      "warnings": []
+    }
+  },
+  "schema_version": "dreamgym-result-bundle-v1",
+  "workload": {
+    "release_identity": {
+      "result_schema_release_id": null,
+      "timing_protocol_release_id": null,
+      "workload_release_id": null
+    },
+    "release_status": {
+      "canonical_status": false,
+      "classification": "custom",
+      "submission_status": false
+    },
+    "workload_digest": "a9e4fbdab1ffaab8445e00f23af59e30d1a414d2c87eafa52c83ef22b9b35955",
+    "workload_version": "dreamgym-autonomous-driving-workload-v3"
+  }
+}

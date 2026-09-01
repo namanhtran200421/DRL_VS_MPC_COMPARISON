@@ -1,0 +1,1146 @@
+{
+  "cases": {
+    "execution-52839be8c1432423ea06e689f554a5e76b368c3c53b193d71219fa35e3862228": {
+      "actual_completed_transitions": 0,
+      "errors": [],
+      "fatal": false,
+      "metrics": {
+        "cold.backend_run_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.backend_run_time_seconds.",
+          "unit": "s",
+          "value": 0.001398666
+        },
+        "cold.backend_setup_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.backend_setup_time_seconds.",
+          "unit": "s",
+          "value": 0.000397666
+        },
+        "cold.backend_solve_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.backend_solve_time_seconds.",
+          "unit": "s",
+          "value": 0.001001
+        },
+        "cold.complete_solver_time_ns": {
+          "definition": "Native suite metric at metrics.cold.complete_solver_time_ns.",
+          "unit": "ns",
+          "value": 10284208
+        },
+        "cold.complete_solver_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.complete_solver_time_seconds.",
+          "unit": "s",
+          "value": 0.010284207994118333
+        },
+        "cold.constraint_matrix_nonzero_count": {
+          "definition": "Native suite metric at metrics.cold.constraint_matrix_nonzero_count.",
+          "unit": "count",
+          "value": 1153
+        },
+        "cold.constraint_row_count": {
+          "definition": "Native suite metric at metrics.cold.constraint_row_count.",
+          "unit": "count",
+          "value": 504
+        },
+        "cold.decision_variable_count": {
+          "definition": "Native suite metric at metrics.cold.decision_variable_count.",
+          "unit": "count",
+          "value": 354
+        },
+        "cold.fixture_index": {
+          "definition": "Native suite metric at metrics.cold.fixture_index.",
+          "unit": "value",
+          "value": 0
+        },
+        "cold.formulation_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.formulation_time_seconds.",
+          "unit": "s",
+          "value": 0.007919457973912358
+        },
+        "cold.hessian_nonzero_count": {
+          "definition": "Native suite metric at metrics.cold.hessian_nonzero_count.",
+          "unit": "count",
+          "value": 354
+        },
+        "cold.index": {
+          "definition": "Native suite metric at metrics.cold.index.",
+          "unit": "value",
+          "value": 0
+        },
+        "cold.model_schedule_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.model_schedule_time_seconds.",
+          "unit": "s",
+          "value": 0.00011474988423287868
+        },
+        "cold.outer_policy_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.outer_policy_time_seconds.",
+          "unit": "s",
+          "value": 0.005193334072828293
+        },
+        "cold.policy_postprocessing_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.policy_postprocessing_time_seconds.",
+          "unit": "s",
+          "value": 5.137501284480095e-05
+        },
+        "cold.policy_total_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.policy_total_time_seconds.",
+          "unit": "s",
+          "value": 0.015477542066946626
+        },
+        "cold.policy_wall_time_ns": {
+          "definition": "Native suite metric at metrics.cold.policy_wall_time_ns.",
+          "unit": "ns",
+          "value": 15496041
+        },
+        "cold.road_horizon_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.road_horizon_time_seconds.",
+          "unit": "s",
+          "value": 0.0
+        },
+        "cold.solver_dual_residual": {
+          "definition": "Native suite metric at metrics.cold.solver_dual_residual.",
+          "unit": "value",
+          "value": 0.030998854808276095
+        },
+        "cold.solver_iterations": {
+          "definition": "Native suite metric at metrics.cold.solver_iterations.",
+          "unit": "value",
+          "value": 150
+        },
+        "cold.solver_postprocessing_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.solver_postprocessing_time_seconds.",
+          "unit": "s",
+          "value": 0.0004466248210519552
+        },
+        "cold.solver_primal_residual": {
+          "definition": "Native suite metric at metrics.cold.solver_primal_residual.",
+          "unit": "value",
+          "value": 0.007934095490416208
+        },
+        "cold.solver_status_code": {
+          "definition": "Native suite metric at metrics.cold.solver_status_code.",
+          "unit": "value",
+          "value": 1
+        },
+        "cold_complete_solver_time_seconds": {
+          "definition": "Native suite metric at metrics.cold_complete_solver_time_seconds.",
+          "unit": "s",
+          "value": 0.010284207994118333
+        },
+        "cold_policy_total_time_seconds": {
+          "definition": "Native suite metric at metrics.cold_policy_total_time_seconds.",
+          "unit": "s",
+          "value": 0.015477542066946626
+        },
+        "complete_solver_time.max_ns": {
+          "definition": "Native suite metric at metrics.complete_solver_time.max_ns.",
+          "unit": "ns",
+          "value": 18589292
+        },
+        "complete_solver_time.mean_ns": {
+          "definition": "Native suite metric at metrics.complete_solver_time.mean_ns.",
+          "unit": "ns",
+          "value": 9113259.48
+        },
+        "complete_solver_time.median_ns": {
+          "definition": "Native suite metric at metrics.complete_solver_time.median_ns.",
+          "unit": "ns",
+          "value": 9019062.5
+        },
+        "complete_solver_time.min_ns": {
+          "definition": "Native suite metric at metrics.complete_solver_time.min_ns.",
+          "unit": "ns",
+          "value": 8341500
+        },
+        "complete_solver_time.p95_ns": {
+          "definition": "Native suite metric at metrics.complete_solver_time.p95_ns.",
+          "unit": "ns",
+          "value": 9741856.25
+        },
+        "complete_solver_time.sample_count": {
+          "definition": "Native suite metric at metrics.complete_solver_time.sample_count.",
+          "unit": "count",
+          "value": 300
+        },
+        "complete_solver_time.throughput_per_s": {
+          "definition": "Native suite metric at metrics.complete_solver_time.throughput_per_s.",
+          "unit": "1/s",
+          "value": 109.73022354895133
+        },
+        "complete_solver_time.total_ns": {
+          "definition": "Native suite metric at metrics.complete_solver_time.total_ns.",
+          "unit": "ns",
+          "value": 2733977844
+        },
+        "complete_solver_time.total_s": {
+          "definition": "Native suite metric at metrics.complete_solver_time.total_s.",
+          "unit": "s",
+          "value": 2.733977844
+        },
+        "fixture_count": {
+          "definition": "Native suite metric at metrics.fixture_count.",
+          "unit": "count",
+          "value": 4
+        },
+        "headline.median_complete_solver_time_ns": {
+          "definition": "Native suite metric at metrics.headline.median_complete_solver_time_ns.",
+          "unit": "ns",
+          "value": 9019062.5
+        },
+        "policy_total_time.max_ns": {
+          "definition": "Native suite metric at metrics.policy_total_time.max_ns.",
+          "unit": "ns",
+          "value": 30038167
+        },
+        "policy_total_time.mean_ns": {
+          "definition": "Native suite metric at metrics.policy_total_time.mean_ns.",
+          "unit": "ns",
+          "value": 13755746.416666666
+        },
+        "policy_total_time.median_ns": {
+          "definition": "Native suite metric at metrics.policy_total_time.median_ns.",
+          "unit": "ns",
+          "value": 13604353.5
+        },
+        "policy_total_time.min_ns": {
+          "definition": "Native suite metric at metrics.policy_total_time.min_ns.",
+          "unit": "ns",
+          "value": 12846708
+        },
+        "policy_total_time.p95_ns": {
+          "definition": "Native suite metric at metrics.policy_total_time.p95_ns.",
+          "unit": "ns",
+          "value": 14610329.5
+        },
+        "policy_total_time.sample_count": {
+          "definition": "Native suite metric at metrics.policy_total_time.sample_count.",
+          "unit": "count",
+          "value": 300
+        },
+        "policy_total_time.throughput_per_s": {
+          "definition": "Native suite metric at metrics.policy_total_time.throughput_per_s.",
+          "unit": "1/s",
+          "value": 72.69689115440403
+        },
+        "policy_total_time.total_ns": {
+          "definition": "Native suite metric at metrics.policy_total_time.total_ns.",
+          "unit": "ns",
+          "value": 4126723925
+        },
+        "policy_total_time.total_s": {
+          "definition": "Native suite metric at metrics.policy_total_time.total_s.",
+          "unit": "s",
+          "value": 4.126723925
+        },
+        "post_warmup_median_complete_solver_time_seconds": {
+          "definition": "Native suite metric at metrics.post_warmup_median_complete_solver_time_seconds.",
+          "unit": "s",
+          "value": 0.0090190625
+        },
+        "solved_inaccurate_count": {
+          "definition": "Native suite metric at metrics.solved_inaccurate_count.",
+          "unit": "count",
+          "value": 0
+        },
+        "warmed_complete_solver_time.max_ns": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.max_ns.",
+          "unit": "ns",
+          "value": 18589292
+        },
+        "warmed_complete_solver_time.mean_ns": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.mean_ns.",
+          "unit": "ns",
+          "value": 9113259.48
+        },
+        "warmed_complete_solver_time.median_ns": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.median_ns.",
+          "unit": "ns",
+          "value": 9019062.5
+        },
+        "warmed_complete_solver_time.min_ns": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.min_ns.",
+          "unit": "ns",
+          "value": 8341500
+        },
+        "warmed_complete_solver_time.p95_ns": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.p95_ns.",
+          "unit": "ns",
+          "value": 9741856.25
+        },
+        "warmed_complete_solver_time.sample_count": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.sample_count.",
+          "unit": "count",
+          "value": 300
+        },
+        "warmed_complete_solver_time.throughput_per_s": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.throughput_per_s.",
+          "unit": "1/s",
+          "value": 109.73022354895133
+        },
+        "warmed_complete_solver_time.total_ns": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.total_ns.",
+          "unit": "ns",
+          "value": 2733977844
+        },
+        "warmed_complete_solver_time.total_s": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.total_s.",
+          "unit": "s",
+          "value": 2.733977844
+        },
+        "warmed_policy_total_time.max_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.max_ns.",
+          "unit": "ns",
+          "value": 30038167
+        },
+        "warmed_policy_total_time.mean_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.mean_ns.",
+          "unit": "ns",
+          "value": 13755746.416666666
+        },
+        "warmed_policy_total_time.median_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.median_ns.",
+          "unit": "ns",
+          "value": 13604353.5
+        },
+        "warmed_policy_total_time.min_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.min_ns.",
+          "unit": "ns",
+          "value": 12846708
+        },
+        "warmed_policy_total_time.p95_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.p95_ns.",
+          "unit": "ns",
+          "value": 14610329.5
+        },
+        "warmed_policy_total_time.sample_count": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.sample_count.",
+          "unit": "count",
+          "value": 300
+        },
+        "warmed_policy_total_time.throughput_per_s": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.throughput_per_s.",
+          "unit": "1/s",
+          "value": 72.69689115440403
+        },
+        "warmed_policy_total_time.total_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.total_ns.",
+          "unit": "ns",
+          "value": 4126723925
+        },
+        "warmed_policy_total_time.total_s": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.total_s.",
+          "unit": "s",
+          "value": 4.126723925
+        },
+        "warmed_policy_wall_time.max_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.max_ns.",
+          "unit": "ns",
+          "value": 30070750
+        },
+        "warmed_policy_wall_time.mean_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.mean_ns.",
+          "unit": "ns",
+          "value": 13773707.453333333
+        },
+        "warmed_policy_wall_time.median_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.median_ns.",
+          "unit": "ns",
+          "value": 13623958.0
+        },
+        "warmed_policy_wall_time.min_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.min_ns.",
+          "unit": "ns",
+          "value": 12857333
+        },
+        "warmed_policy_wall_time.p95_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.p95_ns.",
+          "unit": "ns",
+          "value": 14630960.4
+        },
+        "warmed_policy_wall_time.sample_count": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.sample_count.",
+          "unit": "count",
+          "value": 300
+        },
+        "warmed_policy_wall_time.throughput_per_s": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.throughput_per_s.",
+          "unit": "1/s",
+          "value": 72.60209376365061
+        },
+        "warmed_policy_wall_time.total_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.total_ns.",
+          "unit": "ns",
+          "value": 4132112236
+        },
+        "warmed_policy_wall_time.total_s": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.total_s.",
+          "unit": "s",
+          "value": 4.132112236
+        }
+      },
+      "segment_id": "measurement-d6b3a4e8c99b4975b2d72747f3669c86",
+      "status": "completed",
+      "warnings": []
+    },
+    "execution-881534ff627f6fe73db60a4495ff968ea23b16a2c5d119dce713965b9ee63664": {
+      "actual_completed_transitions": 0,
+      "errors": [],
+      "fatal": false,
+      "metrics": {
+        "cold.backend_run_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.backend_run_time_seconds.",
+          "unit": "s",
+          "value": 0.001329291
+        },
+        "cold.backend_setup_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.backend_setup_time_seconds.",
+          "unit": "s",
+          "value": 0.000454416
+        },
+        "cold.backend_solve_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.backend_solve_time_seconds.",
+          "unit": "s",
+          "value": 0.000874875
+        },
+        "cold.complete_solver_time_ns": {
+          "definition": "Native suite metric at metrics.cold.complete_solver_time_ns.",
+          "unit": "ns",
+          "value": 6757250
+        },
+        "cold.complete_solver_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.complete_solver_time_seconds.",
+          "unit": "s",
+          "value": 0.006757250055670738
+        },
+        "cold.constraint_matrix_nonzero_count": {
+          "definition": "Native suite metric at metrics.cold.constraint_matrix_nonzero_count.",
+          "unit": "count",
+          "value": 693
+        },
+        "cold.constraint_row_count": {
+          "definition": "Native suite metric at metrics.cold.constraint_row_count.",
+          "unit": "count",
+          "value": 304
+        },
+        "cold.decision_variable_count": {
+          "definition": "Native suite metric at metrics.cold.decision_variable_count.",
+          "unit": "count",
+          "value": 214
+        },
+        "cold.fixture_index": {
+          "definition": "Native suite metric at metrics.cold.fixture_index.",
+          "unit": "value",
+          "value": 0
+        },
+        "cold.formulation_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.formulation_time_seconds.",
+          "unit": "s",
+          "value": 0.004534291801974177
+        },
+        "cold.hessian_nonzero_count": {
+          "definition": "Native suite metric at metrics.cold.hessian_nonzero_count.",
+          "unit": "count",
+          "value": 214
+        },
+        "cold.index": {
+          "definition": "Native suite metric at metrics.cold.index.",
+          "unit": "value",
+          "value": 0
+        },
+        "cold.model_schedule_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.model_schedule_time_seconds.",
+          "unit": "s",
+          "value": 6.487499922513962e-05
+        },
+        "cold.outer_policy_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.outer_policy_time_seconds.",
+          "unit": "s",
+          "value": 0.002977499971166253
+        },
+        "cold.policy_postprocessing_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.policy_postprocessing_time_seconds.",
+          "unit": "s",
+          "value": 5.3208088502287865e-05
+        },
+        "cold.policy_total_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.policy_total_time_seconds.",
+          "unit": "s",
+          "value": 0.009734750026836991
+        },
+        "cold.policy_wall_time_ns": {
+          "definition": "Native suite metric at metrics.cold.policy_wall_time_ns.",
+          "unit": "ns",
+          "value": 9748709
+        },
+        "cold.road_horizon_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.road_horizon_time_seconds.",
+          "unit": "s",
+          "value": 0.0
+        },
+        "cold.solver_dual_residual": {
+          "definition": "Native suite metric at metrics.cold.solver_dual_residual.",
+          "unit": "value",
+          "value": 0.0030522087820158967
+        },
+        "cold.solver_iterations": {
+          "definition": "Native suite metric at metrics.cold.solver_iterations.",
+          "unit": "value",
+          "value": 225
+        },
+        "cold.solver_postprocessing_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.solver_postprocessing_time_seconds.",
+          "unit": "s",
+          "value": 0.00027395901270210743
+        },
+        "cold.solver_primal_residual": {
+          "definition": "Native suite metric at metrics.cold.solver_primal_residual.",
+          "unit": "value",
+          "value": 0.0004171103011773193
+        },
+        "cold.solver_status_code": {
+          "definition": "Native suite metric at metrics.cold.solver_status_code.",
+          "unit": "value",
+          "value": 1
+        },
+        "cold_complete_solver_time_seconds": {
+          "definition": "Native suite metric at metrics.cold_complete_solver_time_seconds.",
+          "unit": "s",
+          "value": 0.006757250055670738
+        },
+        "cold_policy_total_time_seconds": {
+          "definition": "Native suite metric at metrics.cold_policy_total_time_seconds.",
+          "unit": "s",
+          "value": 0.009734750026836991
+        },
+        "complete_solver_time.max_ns": {
+          "definition": "Native suite metric at metrics.complete_solver_time.max_ns.",
+          "unit": "ns",
+          "value": 6877917
+        },
+        "complete_solver_time.mean_ns": {
+          "definition": "Native suite metric at metrics.complete_solver_time.mean_ns.",
+          "unit": "ns",
+          "value": 5802392.323333333
+        },
+        "complete_solver_time.median_ns": {
+          "definition": "Native suite metric at metrics.complete_solver_time.median_ns.",
+          "unit": "ns",
+          "value": 5760312.5
+        },
+        "complete_solver_time.min_ns": {
+          "definition": "Native suite metric at metrics.complete_solver_time.min_ns.",
+          "unit": "ns",
+          "value": 5279583
+        },
+        "complete_solver_time.p95_ns": {
+          "definition": "Native suite metric at metrics.complete_solver_time.p95_ns.",
+          "unit": "ns",
+          "value": 6357377.4
+        },
+        "complete_solver_time.sample_count": {
+          "definition": "Native suite metric at metrics.complete_solver_time.sample_count.",
+          "unit": "count",
+          "value": 300
+        },
+        "complete_solver_time.throughput_per_s": {
+          "definition": "Native suite metric at metrics.complete_solver_time.throughput_per_s.",
+          "unit": "1/s",
+          "value": 172.34270698633566
+        },
+        "complete_solver_time.total_ns": {
+          "definition": "Native suite metric at metrics.complete_solver_time.total_ns.",
+          "unit": "ns",
+          "value": 1740717697
+        },
+        "complete_solver_time.total_s": {
+          "definition": "Native suite metric at metrics.complete_solver_time.total_s.",
+          "unit": "s",
+          "value": 1.740717697
+        },
+        "fixture_count": {
+          "definition": "Native suite metric at metrics.fixture_count.",
+          "unit": "count",
+          "value": 4
+        },
+        "headline.median_complete_solver_time_ns": {
+          "definition": "Native suite metric at metrics.headline.median_complete_solver_time_ns.",
+          "unit": "ns",
+          "value": 5760312.5
+        },
+        "policy_total_time.max_ns": {
+          "definition": "Native suite metric at metrics.policy_total_time.max_ns.",
+          "unit": "ns",
+          "value": 10110875
+        },
+        "policy_total_time.mean_ns": {
+          "definition": "Native suite metric at metrics.policy_total_time.mean_ns.",
+          "unit": "ns",
+          "value": 8664351.083333334
+        },
+        "policy_total_time.median_ns": {
+          "definition": "Native suite metric at metrics.policy_total_time.median_ns.",
+          "unit": "ns",
+          "value": 8613104.0
+        },
+        "policy_total_time.min_ns": {
+          "definition": "Native suite metric at metrics.policy_total_time.min_ns.",
+          "unit": "ns",
+          "value": 8144792
+        },
+        "policy_total_time.p95_ns": {
+          "definition": "Native suite metric at metrics.policy_total_time.p95_ns.",
+          "unit": "ns",
+          "value": 9289637.15
+        },
+        "policy_total_time.sample_count": {
+          "definition": "Native suite metric at metrics.policy_total_time.sample_count.",
+          "unit": "count",
+          "value": 300
+        },
+        "policy_total_time.throughput_per_s": {
+          "definition": "Native suite metric at metrics.policy_total_time.throughput_per_s.",
+          "unit": "1/s",
+          "value": 115.41545239592044
+        },
+        "policy_total_time.total_ns": {
+          "definition": "Native suite metric at metrics.policy_total_time.total_ns.",
+          "unit": "ns",
+          "value": 2599305325
+        },
+        "policy_total_time.total_s": {
+          "definition": "Native suite metric at metrics.policy_total_time.total_s.",
+          "unit": "s",
+          "value": 2.599305325
+        },
+        "post_warmup_median_complete_solver_time_seconds": {
+          "definition": "Native suite metric at metrics.post_warmup_median_complete_solver_time_seconds.",
+          "unit": "s",
+          "value": 0.0057603125
+        },
+        "solved_inaccurate_count": {
+          "definition": "Native suite metric at metrics.solved_inaccurate_count.",
+          "unit": "count",
+          "value": 0
+        },
+        "warmed_complete_solver_time.max_ns": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.max_ns.",
+          "unit": "ns",
+          "value": 6877917
+        },
+        "warmed_complete_solver_time.mean_ns": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.mean_ns.",
+          "unit": "ns",
+          "value": 5802392.323333333
+        },
+        "warmed_complete_solver_time.median_ns": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.median_ns.",
+          "unit": "ns",
+          "value": 5760312.5
+        },
+        "warmed_complete_solver_time.min_ns": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.min_ns.",
+          "unit": "ns",
+          "value": 5279583
+        },
+        "warmed_complete_solver_time.p95_ns": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.p95_ns.",
+          "unit": "ns",
+          "value": 6357377.4
+        },
+        "warmed_complete_solver_time.sample_count": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.sample_count.",
+          "unit": "count",
+          "value": 300
+        },
+        "warmed_complete_solver_time.throughput_per_s": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.throughput_per_s.",
+          "unit": "1/s",
+          "value": 172.34270698633566
+        },
+        "warmed_complete_solver_time.total_ns": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.total_ns.",
+          "unit": "ns",
+          "value": 1740717697
+        },
+        "warmed_complete_solver_time.total_s": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.total_s.",
+          "unit": "s",
+          "value": 1.740717697
+        },
+        "warmed_policy_total_time.max_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.max_ns.",
+          "unit": "ns",
+          "value": 10110875
+        },
+        "warmed_policy_total_time.mean_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.mean_ns.",
+          "unit": "ns",
+          "value": 8664351.083333334
+        },
+        "warmed_policy_total_time.median_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.median_ns.",
+          "unit": "ns",
+          "value": 8613104.0
+        },
+        "warmed_policy_total_time.min_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.min_ns.",
+          "unit": "ns",
+          "value": 8144792
+        },
+        "warmed_policy_total_time.p95_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.p95_ns.",
+          "unit": "ns",
+          "value": 9289637.15
+        },
+        "warmed_policy_total_time.sample_count": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.sample_count.",
+          "unit": "count",
+          "value": 300
+        },
+        "warmed_policy_total_time.throughput_per_s": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.throughput_per_s.",
+          "unit": "1/s",
+          "value": 115.41545239592044
+        },
+        "warmed_policy_total_time.total_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.total_ns.",
+          "unit": "ns",
+          "value": 2599305325
+        },
+        "warmed_policy_total_time.total_s": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.total_s.",
+          "unit": "s",
+          "value": 2.599305325
+        },
+        "warmed_policy_wall_time.max_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.max_ns.",
+          "unit": "ns",
+          "value": 10130208
+        },
+        "warmed_policy_wall_time.mean_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.mean_ns.",
+          "unit": "ns",
+          "value": 8679226.69
+        },
+        "warmed_policy_wall_time.median_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.median_ns.",
+          "unit": "ns",
+          "value": 8626791.5
+        },
+        "warmed_policy_wall_time.min_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.min_ns.",
+          "unit": "ns",
+          "value": 8154666
+        },
+        "warmed_policy_wall_time.p95_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.p95_ns.",
+          "unit": "ns",
+          "value": 9303760.75
+        },
+        "warmed_policy_wall_time.sample_count": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.sample_count.",
+          "unit": "count",
+          "value": 300
+        },
+        "warmed_policy_wall_time.throughput_per_s": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.throughput_per_s.",
+          "unit": "1/s",
+          "value": 115.21763812808074
+        },
+        "warmed_policy_wall_time.total_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.total_ns.",
+          "unit": "ns",
+          "value": 2603768007
+        },
+        "warmed_policy_wall_time.total_s": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.total_s.",
+          "unit": "s",
+          "value": 2.603768007
+        }
+      },
+      "segment_id": "measurement-baaa48185c8341d3a35e49819cf13dfd",
+      "status": "completed",
+      "warnings": []
+    },
+    "execution-b6a0d0247ac257c66641f8c701d07e42bde9715fc2c0e55211c6ed816560df20": {
+      "actual_completed_transitions": 0,
+      "errors": [],
+      "fatal": false,
+      "metrics": {
+        "cold.backend_run_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.backend_run_time_seconds.",
+          "unit": "s",
+          "value": 0.000365124
+        },
+        "cold.backend_setup_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.backend_setup_time_seconds.",
+          "unit": "s",
+          "value": 7.5041e-05
+        },
+        "cold.backend_solve_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.backend_solve_time_seconds.",
+          "unit": "s",
+          "value": 0.000290083
+        },
+        "cold.complete_solver_time_ns": {
+          "definition": "Native suite metric at metrics.cold.complete_solver_time_ns.",
+          "unit": "ns",
+          "value": 2545583
+        },
+        "cold.complete_solver_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.complete_solver_time_seconds.",
+          "unit": "s",
+          "value": 0.002545583061873913
+        },
+        "cold.constraint_matrix_nonzero_count": {
+          "definition": "Native suite metric at metrics.cold.constraint_matrix_nonzero_count.",
+          "unit": "count",
+          "value": 233
+        },
+        "cold.constraint_row_count": {
+          "definition": "Native suite metric at metrics.cold.constraint_row_count.",
+          "unit": "count",
+          "value": 104
+        },
+        "cold.decision_variable_count": {
+          "definition": "Native suite metric at metrics.cold.decision_variable_count.",
+          "unit": "count",
+          "value": 74
+        },
+        "cold.fixture_index": {
+          "definition": "Native suite metric at metrics.cold.fixture_index.",
+          "unit": "value",
+          "value": 0
+        },
+        "cold.formulation_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.formulation_time_seconds.",
+          "unit": "s",
+          "value": 0.0017370409332215786
+        },
+        "cold.hessian_nonzero_count": {
+          "definition": "Native suite metric at metrics.cold.hessian_nonzero_count.",
+          "unit": "count",
+          "value": 74
+        },
+        "cold.index": {
+          "definition": "Native suite metric at metrics.cold.index.",
+          "unit": "value",
+          "value": 0
+        },
+        "cold.model_schedule_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.model_schedule_time_seconds.",
+          "unit": "s",
+          "value": 3.616698086261749e-05
+        },
+        "cold.outer_policy_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.outer_policy_time_seconds.",
+          "unit": "s",
+          "value": 0.0012705838307738304
+        },
+        "cold.policy_postprocessing_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.policy_postprocessing_time_seconds.",
+          "unit": "s",
+          "value": 5.258386954665184e-05
+        },
+        "cold.policy_total_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.policy_total_time_seconds.",
+          "unit": "s",
+          "value": 0.0038161668926477432
+        },
+        "cold.policy_wall_time_ns": {
+          "definition": "Native suite metric at metrics.cold.policy_wall_time_ns.",
+          "unit": "ns",
+          "value": 3828959
+        },
+        "cold.road_horizon_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.road_horizon_time_seconds.",
+          "unit": "s",
+          "value": 0.0
+        },
+        "cold.solver_dual_residual": {
+          "definition": "Native suite metric at metrics.cold.solver_dual_residual.",
+          "unit": "value",
+          "value": 0.00114398266210014
+        },
+        "cold.solver_iterations": {
+          "definition": "Native suite metric at metrics.cold.solver_iterations.",
+          "unit": "value",
+          "value": 225
+        },
+        "cold.solver_postprocessing_time_seconds": {
+          "definition": "Native suite metric at metrics.cold.solver_postprocessing_time_seconds.",
+          "unit": "s",
+          "value": 0.00012041605077683926
+        },
+        "cold.solver_primal_residual": {
+          "definition": "Native suite metric at metrics.cold.solver_primal_residual.",
+          "unit": "value",
+          "value": 0.000129996475366884
+        },
+        "cold.solver_status_code": {
+          "definition": "Native suite metric at metrics.cold.solver_status_code.",
+          "unit": "value",
+          "value": 1
+        },
+        "cold_complete_solver_time_seconds": {
+          "definition": "Native suite metric at metrics.cold_complete_solver_time_seconds.",
+          "unit": "s",
+          "value": 0.002545583061873913
+        },
+        "cold_policy_total_time_seconds": {
+          "definition": "Native suite metric at metrics.cold_policy_total_time_seconds.",
+          "unit": "s",
+          "value": 0.0038161668926477432
+        },
+        "complete_solver_time.max_ns": {
+          "definition": "Native suite metric at metrics.complete_solver_time.max_ns.",
+          "unit": "ns",
+          "value": 14358292
+        },
+        "complete_solver_time.mean_ns": {
+          "definition": "Native suite metric at metrics.complete_solver_time.mean_ns.",
+          "unit": "ns",
+          "value": 2421256.5166666666
+        },
+        "complete_solver_time.median_ns": {
+          "definition": "Native suite metric at metrics.complete_solver_time.median_ns.",
+          "unit": "ns",
+          "value": 2101854.0
+        },
+        "complete_solver_time.min_ns": {
+          "definition": "Native suite metric at metrics.complete_solver_time.min_ns.",
+          "unit": "ns",
+          "value": 1809500
+        },
+        "complete_solver_time.p95_ns": {
+          "definition": "Native suite metric at metrics.complete_solver_time.p95_ns.",
+          "unit": "ns",
+          "value": 3529452.050000001
+        },
+        "complete_solver_time.sample_count": {
+          "definition": "Native suite metric at metrics.complete_solver_time.sample_count.",
+          "unit": "count",
+          "value": 300
+        },
+        "complete_solver_time.throughput_per_s": {
+          "definition": "Native suite metric at metrics.complete_solver_time.throughput_per_s.",
+          "unit": "1/s",
+          "value": 413.0086973918384
+        },
+        "complete_solver_time.total_ns": {
+          "definition": "Native suite metric at metrics.complete_solver_time.total_ns.",
+          "unit": "ns",
+          "value": 726376955
+        },
+        "complete_solver_time.total_s": {
+          "definition": "Native suite metric at metrics.complete_solver_time.total_s.",
+          "unit": "s",
+          "value": 0.726376955
+        },
+        "fixture_count": {
+          "definition": "Native suite metric at metrics.fixture_count.",
+          "unit": "count",
+          "value": 4
+        },
+        "headline.median_complete_solver_time_ns": {
+          "definition": "Native suite metric at metrics.headline.median_complete_solver_time_ns.",
+          "unit": "ns",
+          "value": 2101854.0
+        },
+        "policy_total_time.max_ns": {
+          "definition": "Native suite metric at metrics.policy_total_time.max_ns.",
+          "unit": "ns",
+          "value": 19769125
+        },
+        "policy_total_time.mean_ns": {
+          "definition": "Native suite metric at metrics.policy_total_time.mean_ns.",
+          "unit": "ns",
+          "value": 3644061.81
+        },
+        "policy_total_time.median_ns": {
+          "definition": "Native suite metric at metrics.policy_total_time.median_ns.",
+          "unit": "ns",
+          "value": 3187479.0
+        },
+        "policy_total_time.min_ns": {
+          "definition": "Native suite metric at metrics.policy_total_time.min_ns.",
+          "unit": "ns",
+          "value": 2851917
+        },
+        "policy_total_time.p95_ns": {
+          "definition": "Native suite metric at metrics.policy_total_time.p95_ns.",
+          "unit": "ns",
+          "value": 5337834.750000014
+        },
+        "policy_total_time.sample_count": {
+          "definition": "Native suite metric at metrics.policy_total_time.sample_count.",
+          "unit": "count",
+          "value": 300
+        },
+        "policy_total_time.throughput_per_s": {
+          "definition": "Native suite metric at metrics.policy_total_time.throughput_per_s.",
+          "unit": "1/s",
+          "value": 274.41905547699804
+        },
+        "policy_total_time.total_ns": {
+          "definition": "Native suite metric at metrics.policy_total_time.total_ns.",
+          "unit": "ns",
+          "value": 1093218543
+        },
+        "policy_total_time.total_s": {
+          "definition": "Native suite metric at metrics.policy_total_time.total_s.",
+          "unit": "s",
+          "value": 1.093218543
+        },
+        "post_warmup_median_complete_solver_time_seconds": {
+          "definition": "Native suite metric at metrics.post_warmup_median_complete_solver_time_seconds.",
+          "unit": "s",
+          "value": 0.002101854
+        },
+        "solved_inaccurate_count": {
+          "definition": "Native suite metric at metrics.solved_inaccurate_count.",
+          "unit": "count",
+          "value": 0
+        },
+        "warmed_complete_solver_time.max_ns": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.max_ns.",
+          "unit": "ns",
+          "value": 14358292
+        },
+        "warmed_complete_solver_time.mean_ns": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.mean_ns.",
+          "unit": "ns",
+          "value": 2421256.5166666666
+        },
+        "warmed_complete_solver_time.median_ns": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.median_ns.",
+          "unit": "ns",
+          "value": 2101854.0
+        },
+        "warmed_complete_solver_time.min_ns": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.min_ns.",
+          "unit": "ns",
+          "value": 1809500
+        },
+        "warmed_complete_solver_time.p95_ns": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.p95_ns.",
+          "unit": "ns",
+          "value": 3529452.050000001
+        },
+        "warmed_complete_solver_time.sample_count": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.sample_count.",
+          "unit": "count",
+          "value": 300
+        },
+        "warmed_complete_solver_time.throughput_per_s": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.throughput_per_s.",
+          "unit": "1/s",
+          "value": 413.0086973918384
+        },
+        "warmed_complete_solver_time.total_ns": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.total_ns.",
+          "unit": "ns",
+          "value": 726376955
+        },
+        "warmed_complete_solver_time.total_s": {
+          "definition": "Native suite metric at metrics.warmed_complete_solver_time.total_s.",
+          "unit": "s",
+          "value": 0.726376955
+        },
+        "warmed_policy_total_time.max_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.max_ns.",
+          "unit": "ns",
+          "value": 19769125
+        },
+        "warmed_policy_total_time.mean_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.mean_ns.",
+          "unit": "ns",
+          "value": 3644061.81
+        },
+        "warmed_policy_total_time.median_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.median_ns.",
+          "unit": "ns",
+          "value": 3187479.0
+        },
+        "warmed_policy_total_time.min_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.min_ns.",
+          "unit": "ns",
+          "value": 2851917
+        },
+        "warmed_policy_total_time.p95_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.p95_ns.",
+          "unit": "ns",
+          "value": 5337834.750000014
+        },
+        "warmed_policy_total_time.sample_count": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.sample_count.",
+          "unit": "count",
+          "value": 300
+        },
+        "warmed_policy_total_time.throughput_per_s": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.throughput_per_s.",
+          "unit": "1/s",
+          "value": 274.41905547699804
+        },
+        "warmed_policy_total_time.total_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.total_ns.",
+          "unit": "ns",
+          "value": 1093218543
+        },
+        "warmed_policy_total_time.total_s": {
+          "definition": "Native suite metric at metrics.warmed_policy_total_time.total_s.",
+          "unit": "s",
+          "value": 1.093218543
+        },
+        "warmed_policy_wall_time.max_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.max_ns.",
+          "unit": "ns",
+          "value": 19876292
+        },
+        "warmed_policy_wall_time.mean_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.mean_ns.",
+          "unit": "ns",
+          "value": 3654293.0966666667
+        },
+        "warmed_policy_wall_time.median_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.median_ns.",
+          "unit": "ns",
+          "value": 3196396.0
+        },
+        "warmed_policy_wall_time.min_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.min_ns.",
+          "unit": "ns",
+          "value": 2859375
+        },
+        "warmed_policy_wall_time.p95_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.p95_ns.",
+          "unit": "ns",
+          "value": 5352085.750000014
+        },
+        "warmed_policy_wall_time.sample_count": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.sample_count.",
+          "unit": "count",
+          "value": 300
+        },
+        "warmed_policy_wall_time.throughput_per_s": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.throughput_per_s.",
+          "unit": "1/s",
+          "value": 273.65073724167587
+        },
+        "warmed_policy_wall_time.total_ns": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.total_ns.",
+          "unit": "ns",
+          "value": 1096287929
+        },
+        "warmed_policy_wall_time.total_s": {
+          "definition": "Native suite metric at metrics.warmed_policy_wall_time.total_s.",
+          "unit": "s",
+          "value": 1.096287929
+        }
+      },
+      "segment_id": "measurement-4b549ffcd0e0493dbe00a44eee2f1c2a",
+      "status": "completed",
+      "warnings": []
+    }
+  },
+  "result_schema_version": "dreamgym-profile-results-v1",
+  "schema_version": "dreamgym-result-bundle-v1"
+}
